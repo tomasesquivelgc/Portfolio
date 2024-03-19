@@ -8,7 +8,7 @@ export default {
     colors: {
       night: '#0A0B0B',
       richBlack: '#0A1623',
-      argentinianBlue: '#4CA8EA',
+      argBlue: '#4CA8EA',
       magnolia: '#FCF7FF',
     },
     extend: {
