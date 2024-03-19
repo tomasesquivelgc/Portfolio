@@ -1,5 +1,4 @@
 function App() {
-
   return (
     <>
       <section className="bg-night min-h-screen">
@@ -11,14 +10,14 @@ function App() {
       </section>
 
       <section className="bg-night min-h-screen">
-      <h1>About me</h1>
-        </section>
+        <h1>About me</h1>
+      </section>
 
       <section className="bg-richBlack min-h-screen">
         <h1>Contact me</h1>
       </section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
