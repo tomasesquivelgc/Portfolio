@@ -8,15 +8,15 @@ function App() {
       </section>
 
       <section className="bg-richBlack min-h-screen">
-        <h1>My recent projects</h1>
+        <h2>About me</h2>
       </section>
 
       <section className="bg-night min-h-screen">
-        <h1>About me</h1>
+        <h2>My projects</h2>
       </section>
 
       <section className="bg-richBlack min-h-screen">
-        <h1>Contact me</h1>
+        <h2>Contact me</h2>
       </section>
     </>
   );
