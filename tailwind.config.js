@@ -11,7 +11,13 @@ export default {
       argentinianBlue: '#4CA8EA',
       magnolia: '#FCF7FF',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'monts': ['Montserrat', 'sans-serif'],
+        'gentium': ['Gentium Book Plus', 'serif'],
+        'chivo': ['Chivo', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };
