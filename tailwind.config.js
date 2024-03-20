@@ -13,9 +13,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        'monts': ['Montserrat', 'sans-serif'],
-        'gentium': ['Gentium Book Plus', 'serif'],
-        'chivo': ['Chivo', 'sans-serif'],
+        monts: ['Montserrat', 'sans-serif'],
+        gentium: ['Gentium Book Plus', 'serif'],
+        chivo: ['Chivo', 'sans-serif'],
       },
     },
   },
