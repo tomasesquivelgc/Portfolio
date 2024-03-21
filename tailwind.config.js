@@ -10,6 +10,7 @@ export default {
       richBlack: '#0A1623',
       argBlue: '#4CA8EA',
       magnolia: '#FCF7FF',
+      modal: '#000000e1',
     },
     extend: {
       fontFamily: {

@@ -1,4 +1,5 @@
 import React from "react";
+import InfoList from "../components/InfoList";
 
 function AboutSection() {
   return(
@@ -14,12 +15,7 @@ function AboutSection() {
             <br />
             If you must know one thing about me is that I love a good challenge. I'm always looking for new ways to improve and learn new things. But if you want to know more, you can check the list below.
             </p>
-          <ul>
-            <li>A list</li>
-            <li>Goes here</li>
-            <li>Of stuff</li>
-            <li>About me!</li>
-          </ul>
+          <InfoList />
         </div>
         <img src="src\assets\cropped_face.jpg" alt="thats me!" className="w-1/2 py-3" />
       </section>
