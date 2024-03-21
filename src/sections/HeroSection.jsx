@@ -15,7 +15,7 @@ function HeroSection() {
         {' '}
         developer
       </h2>
-      <p className="font-chivo py-3 md:text-xl">In my youth I dreamt of becoming an inventor, so I became an engineer.</p>
+      <p className="font-chivo py-3 md:text-xl">Create. Design. Innovate.</p>
     </section>
   ); 
 }

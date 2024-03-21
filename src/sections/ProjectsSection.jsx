@@ -4,8 +4,8 @@ import FeaturedProject from "../components/FeaturedProject.jsx";
 
 function ProjectsSection() {
   return (
-    <section className="bg-night min-h-screen text-center p-36">
-      <h2 className="font-gentium italic text-5xl py-3">My projects</h2>
+    <section className="bg-night min-h-screen text-center md:px-36 md:py-28">
+      <h2 className="font-monts font-bold text-5xl py-3">My projects</h2>
       <div className="flex flex-col justify-center">
         {featured.map((project, index) => (
           <FeaturedProject

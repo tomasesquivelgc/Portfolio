@@ -11,7 +11,7 @@ function FeaturedProject({ project, alignRight }) {
       <img
       className="w-3/5" src={project.image} alt={project.title} />
       <div className={`${alignRight ? "lg:text-left" : "lg:text-right"}`}>
-        <p className="font-chivo text-argBlue">Featured project</p>
+        <p className="font-gentium italic text-argBlue">Featured project</p>
         <a
           href={project.link}
           target="_blank"
