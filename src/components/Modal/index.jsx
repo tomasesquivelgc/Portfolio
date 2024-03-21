@@ -1,17 +1,15 @@
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
-import Backdrop from "../Backdrop";
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import Backdrop from '../Backdrop';
 
-const Modal=({ handleClose, text }) => {
+const Modal = ({ handleClose, text }) => {
   useEffect(() => {
-    // Add 'modal-open' class to the body when the modal is opened
     document.body.classList.add('overflow-hidden');
-    // Remove 'modal-open' class from the body when the modal is closed
     return () => {
       document.body.classList.remove('overflow-hidden');
     };
   }, []);
-  return(
+  return (
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
@@ -21,9 +19,16 @@ const Modal=({ handleClose, text }) => {
         exit="exit"
       >
         <p className="font-chivo text-magnolia">{text}</p>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          className="bg-argBlue text-magnolia font-chivo py-2 px-4 rounded-lg hover:bg-argBlueDark"
+          onClick={handleClose}
+        >
+          Close
+        </motion.button>
       </motion.div>
     </Backdrop>
   );
-}
+};
 
 export default Modal;

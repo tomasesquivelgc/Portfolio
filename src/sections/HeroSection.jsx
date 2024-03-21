@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 function HeroSection() {
-  return(
+  return (
     <section className="bg-night min-h-screen flex flex-col justify-center text-center p-4 md:p-16">
       <h1 className="font-monts font-extrabold text-4xl md:text-6xl py-3">
         Welcome.
@@ -17,7 +17,7 @@ function HeroSection() {
       </h2>
       <p className="font-chivo py-3 md:text-xl">Create. Design. Innovate.</p>
     </section>
-  ); 
+  );
 }
 
 export default HeroSection;

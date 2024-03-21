@@ -1,8 +1,8 @@
-import React from "react";
-import ContactForm from "../components/ContactForm";
+import React from 'react';
+import ContactForm from '../components/ContactForm';
 
 function ContactSection() {
-  return(
+  return (
     <section className="bg-richBlack min-h-screen flex flex-col md:flex-row md:px-36 md:py-28">
       <ContactForm />
       <div className="px-3 w-full md:w-1/2">

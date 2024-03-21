@@ -1,6 +1,6 @@
-import React from "react";
-import featured from "../projects/featured.js";
-import FeaturedProject from "../components/FeaturedProject.jsx";
+import React from 'react';
+import featured from '../projects/featured.js';
+import FeaturedProject from '../components/FeaturedProject.jsx';
 
 function ProjectsSection() {
   return (

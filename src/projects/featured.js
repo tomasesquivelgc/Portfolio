@@ -22,7 +22,7 @@ const featured = [
     description: 'Landing page for a fictional event built with simple HTML, CSS and JavaScript. The page is fully responsive with a mobile-first approach. Sections are hidden and shown with a simple JavaScript function and created with DOM manipulation.',
     link: 'https://precious-dolphin-41f59b.netlify.app',
     codeLink: 'https://github.com/tomasesquivelgc/module1-capstone',
-  }
+  },
 ];
 
 export default featured;
