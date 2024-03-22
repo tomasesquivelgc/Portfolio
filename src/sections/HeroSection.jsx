@@ -27,7 +27,7 @@ function HeroSection() {
               key={char + "-" + index}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: index * 0.1 + 1.5 }}
+              transition={{ delay: index * 0.1 + 1.1 }}
             >
               {char}
             </motion.span>
@@ -37,7 +37,7 @@ function HeroSection() {
         className="text-argBlue"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 3 , duration: 3}}
+        transition={{ delay: 2.5 , duration: 2}}
         >
           Tomás
         </motion.span>
@@ -45,17 +45,17 @@ function HeroSection() {
       <motion.h2
       initial={{ opacity: 0, size: 0 }}
       animate={{ opacity: 1, size: 1 }}
-      transition={{ duration: 2, delay: 4.5 }}
-      className="font-gentium text-3xl md:text-5xl text-magnolia italic py-3">
+      transition={{ duration: 2, delay: 3.5 }}
+      className="font-gentium text-3xl md:text-4xl text-magnolia italic py-3">
         <span className="text-argBlue">Software</span>
         {' '}
         developer
       </motion.h2>
-      <p className="font-chivo py-3 md:text-xl">
+      <p className="font-chivo py-3 md:text-l">
         <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 5.5, duration: 3}}
+        transition={{ delay: 4.2, duration: 3}}
         >
           Create.
         </motion.span>
@@ -63,7 +63,7 @@ function HeroSection() {
         <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 6, duration: 3}}
+        transition={{ delay: 4.7, duration: 3}}
         >
           Design.
         </motion.span>
@@ -71,7 +71,7 @@ function HeroSection() {
         <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 6.5, duration: 3}}
+        transition={{ delay: 5.2, duration: 3}}
         >
           Innovate.
         </motion.span>
