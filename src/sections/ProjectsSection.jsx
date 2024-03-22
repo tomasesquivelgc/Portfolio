@@ -13,7 +13,7 @@ function ProjectsSection() {
             <FeaturedProject
               key={project.title}
               project={project}
-              alignRight={index % 2 === 0}
+              alignRight={index % 2 !== 0}
             />
           ))}
         </div>
