@@ -5,25 +5,24 @@ function FeaturedProject({ project, alignRight }) {
   return (
     <div
       key={project.id}
-      className={`w-full md:w-full relative pt-4 pb-20 flex ${
+      className={`w-full md:w-full relative pt-5 md:pb-20 flex ${
         alignRight ? 'flex-row-reverse' : ''
         }`}
       >
 
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        transition={{ duration: 0.5 }}
-        className="w-7/12">
-          <img
-            className="w-full"
-            src={project.image}
-            alt={project.title}
-          />
-      </motion.div>
+      <div className="w-full md:w-7/12 filter bg-richBlack md:filter-none">
+        <motion.img
+          whileHover={{ scale: 1.03, opacity: 1}}
+          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.3 }}
+          className="w-full opacity-20 md:opacity-60"
+          src={project.image}
+          alt={project.title}
+        />
+      </div>
 
-      <div className={`${alignRight ? 'lg:text-left' : 'lg:text-right left-2/4'} w-1/2 absolute top-0 left-0 z-10`}>
-        <h4 className='font-monts text-3xl font-medium hover:text-argBlue py-4'>
+      <div className={`${alignRight ? 'md:text-left' : 'md:text-right md:left-2/4'} w-full h-full md:w-1/2 absolute top-0 left-0 z-10 flex flex-col justify-between md:justify-start`}>
+        <h4 className='font-monts text-3xl font-medium hover:text-argBlue pt-10 md:py-4'>
           <a
             href={project.link}
             target="_blank"
@@ -33,9 +32,9 @@ function FeaturedProject({ project, alignRight }) {
           </a>
         </h4>
         
-        <p className="font-chivo py-3 px-5 bg-richBlack">{project.description}</p>
+        <p className="font-chivo py-3 px-5 md:bg-richBlack">{project.description}</p>
 
-        <ul className={`flex gap-3 w-full ${alignRight ? 'justify-start' : 'justify-end'}`}>
+        <ul className={`flex gap-3 justify-center w-full ${alignRight ? 'md:justify-start' : 'md:justify-end'}`}>
           {project.technologies.map((tech) => (
             <li key={tech} className="font-gentium text-argBlue py-2">
               {tech}
