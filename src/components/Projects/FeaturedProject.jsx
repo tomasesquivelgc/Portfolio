@@ -5,12 +5,12 @@ function FeaturedProject({ project, alignRight }) {
   return (
     <div
       key={project.id}
-      className={`w-full md:w-full relative pt-5 md:pb-20 flex ${
+      className={`w-full min-h-96 md:w-full relative md:pb-20 flex ${
         alignRight ? 'flex-row-reverse' : ''
       }`}
     >
 
-      <div className="w-full md:w-7/12 filter bg-prussiaBlue md:filter-none">
+      <div className={`w-full md:w-7/12 overflow-hidden bg-prussiaBlue absolute ${alignRight ? 'left-0' : 'right-0'}`}>
         <motion.img
           whileHover={{ scale: 1.03, opacity: 1 }}
           whileTap={{ scale: 0.95 }}
@@ -21,8 +21,8 @@ function FeaturedProject({ project, alignRight }) {
         />
       </div>
 
-      <div className={`${alignRight ? 'md:text-left' : 'md:text-right md:left-2/4'} w-full h-full md:w-1/2 absolute top-0 left-0 z-10 flex flex-col justify-between md:justify-start`}>
-        <h4 className="text-2xl hover:text-argBlue pt-10 md:py-4">
+      <div className={`${alignRight ? 'md:text-right' : 'md:text-left'} md:w-1/2 z-10 flex flex-col`}>
+        <h4 className="text-2xl hover:text-argBlue p-2 md:px-0">
           <a
             href={project.link}
             target="_blank"
@@ -32,9 +32,9 @@ function FeaturedProject({ project, alignRight }) {
           </a>
         </h4>
 
-        <p className="py-3 px-5 md:bg-prussiaBlue opacity-90">{project.description}</p>
+        <p className="p-2 md:bg-prussiaBlue opacity-90">{project.description}</p>
 
-        <ul className={`flex gap-3 justify-center w-full ${alignRight ? 'md:justify-start' : 'md:justify-end'}`}>
+        <ul className={`p-2 md:px-0 flex gap-2 w-full ${alignRight ? 'md:justify-end' : 'md:justify-start'}`}>
           {project.technologies.map((tech) => (
             <li key={tech} className="font-chivo text-argBlue py-2">
               {tech}
