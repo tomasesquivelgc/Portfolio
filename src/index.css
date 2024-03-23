@@ -4,6 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.light-title:hover h4{
-  color: #4CA8EA;
+.light-title:hover h4 {
+  color: #4ca8ea;
 }
