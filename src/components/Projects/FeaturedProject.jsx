@@ -5,23 +5,24 @@ function FeaturedProject({ project, alignRight }) {
   return (
     <div
       key={project.id}
-      className={`w-full md:w-full relative pt-5 md:pb-20 flex ${
-        alignRight ? 'flex-row-reverse' : ''
+      className={`w-full md:w-full relative md:pb-20 min-h-80 flex my-2 md:my-4 lg:my-8 ${
+        alignRight ? 'md:justify-end' : ''
       }`}
     >
 
-      <div className="w-full md:w-7/12 filter bg-richBlack md:filter-none">
+      <div className={`h-full md:h-auto md:w-7/12 overflow-hidden md:overflow-visible bg-prussiaBlue flex justify-center absolute ${alignRight ? 'left-0' : 'right-0'}`}>
         <motion.img
           whileHover={{ scale: 1.03, opacity: 1 }}
           whileTap={{ scale: 0.95 }}
-          className="w-full opacity-20 md:opacity-60"
+          transition={{ duration: 0.5 }}
+          className="h-full min-w-max md:min-w-0 md:h-auto opacity-15 md:opacity-70"
           src={project.image}
           alt={project.title}
         />
       </div>
 
-      <div className={`${alignRight ? 'md:text-left' : 'md:text-right md:left-2/4'} w-full h-full md:w-1/2 absolute top-0 left-0 z-10 flex flex-col justify-between md:justify-start`}>
-        <h4 className="font-monts text-3xl font-medium hover:text-argBlue pt-10 md:py-4">
+      <div className={`${alignRight ? 'md:text-right ' : 'md:text-left'} w-full md:w-1/2 p-4 md:p-0 z-10 flex flex-col justify-between`}>
+        <h4 className="text-2xl hover:text-argBlue p-2 md:px-0">
           <a
             href={project.link}
             target="_blank"
@@ -31,11 +32,11 @@ function FeaturedProject({ project, alignRight }) {
           </a>
         </h4>
 
-        <p className="font-chivo py-3 px-5 md:bg-richBlack">{project.description}</p>
+        <p className="p-2 md:bg-prussiaBlue opacity-90">{project.description}</p>
 
-        <ul className={`flex gap-3 justify-center w-full ${alignRight ? 'md:justify-start' : 'md:justify-end'}`}>
+        <ul className={`p-2 md:px-0 flex gap-2 w-full flex-wrap ${alignRight ? 'md:justify-end' : 'md:justify-start'}`}>
           {project.technologies.map((tech) => (
-            <li key={tech} className="font-gentium text-argBlue py-2">
+            <li key={tech} className="font-chivo text-argBlue py-2">
               {tech}
             </li>
           ))}

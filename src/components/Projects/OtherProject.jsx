@@ -14,18 +14,18 @@ const OtherProject = ({ project }) => {
     <motion.div
       whileHover={{ translateY: -10 }}
       onClick={handleClick}
-      className="w-full hover:cursor-pointer light-title text-left bg-richBlack justify-self-center p-7 h-full flex flex-col justify-between"
+      className="w-full hover:cursor-pointer light-title text-left bg-prussiaBlue justify-self-center p-7 h-full flex flex-col justify-between"
     >
-      <h4 className="font-monts text-2xl font-medium py-3">
+      <h4 className="text-2xl py-3">
         {project.title}
       </h4>
-      <p className="py-3">
+      <p className="py-3 opacity-80">
         {project.description}
       </p>
       <ul className="flex gap-x-3 py-3">
         {project.technologies.map((tech) => (
           <li
-            className="font-gentium text-argBlue"
+            className="font-chivo text-argBlue"
             key={tech}
           >
             {tech}
