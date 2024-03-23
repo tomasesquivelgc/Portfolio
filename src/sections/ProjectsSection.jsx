@@ -5,10 +5,10 @@ import OtherProject from '../components/Projects/OtherProject';
 
 function ProjectsSection() {
   return (
-    <section className="bg-night min-h-screen text-center px-10 py-10 lg:px-28 lg:py-28">
-      <h2 className="font-monts font-bold text-4xl py-3">My projects</h2>
+    <section className="min-h-screen text-center px-10 py-10 lg:px-28 lg:py-28 bg-richBlack">
+      <h2 className="font-bold text-4xl py-3">My projects</h2>
       <div>
-        <h3 className="text-xl font-gentium italic text-argBlue py-5">Featured projects</h3>
+        <h3 className="font-chivo text-xl text-argBlue py-5">Featured projects</h3>
         <div className="flex flex-col justify-center">
           {featured.map((project, index) => (
             <FeaturedProject
@@ -20,7 +20,7 @@ function ProjectsSection() {
         </div>
       </div>
       <div>
-        <h3 className="text-xl font-gentium italic text-argBlue py-5">More projects</h3>
+        <h3 className="text-xl font-chivo text-argBlue py-5">More projects</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {moreProjects.map((project) => (
             <OtherProject

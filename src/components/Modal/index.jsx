@@ -19,10 +19,10 @@ const Modal = ({ handleClose, text }) => {
         animate="visible"
         exit="exit"
       >
-        <p className="font-chivo text-magnolia">{text}</p>
+        <p className="">{text}</p>
         <motion.button
           whileHover={{ scale: 1.1 }}
-          className="bg-argBlue text-magnolia font-chivo py-2 px-4 rounded-lg hover:bg-argBlueDark"
+          className="bg-argBluepy-2 px-4 rounded-lg hover:bg-argBlueDark"
           onClick={handleClose}
         >
           Close

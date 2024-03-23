@@ -10,10 +10,11 @@ function FeaturedProject({ project, alignRight }) {
       }`}
     >
 
-      <div className="w-full md:w-7/12 filter bg-richBlack md:filter-none">
+      <div className="w-full md:w-7/12 filter bg-rusViolet md:filter-none">
         <motion.img
           whileHover={{ scale: 1.03, opacity: 1 }}
           whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.5 }}
           className="w-full opacity-20 md:opacity-60"
           src={project.image}
           alt={project.title}
@@ -31,11 +32,11 @@ function FeaturedProject({ project, alignRight }) {
           </a>
         </h4>
 
-        <p className="font-chivo py-3 px-5 md:bg-richBlack">{project.description}</p>
+        <p className="py-3 px-5 md:bg-prussiaBlue opacity-80">{project.description}</p>
 
         <ul className={`flex gap-3 justify-center w-full ${alignRight ? 'md:justify-start' : 'md:justify-end'}`}>
           {project.technologies.map((tech) => (
-            <li key={tech} className="font-gentium text-argBlue py-2">
+            <li key={tech} className="font-chivo text-argBlue py-2">
               {tech}
             </li>
           ))}

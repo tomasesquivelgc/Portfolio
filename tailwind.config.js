@@ -11,6 +11,7 @@ export default {
       argBlue: '#4CA8EA',
       magnolia: '#FCF7FF',
       modal: '#000000e1',
+      prussiaBlue: '#122840',
     },
     extend: {
       fontFamily: {

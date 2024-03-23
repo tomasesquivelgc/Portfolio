@@ -48,7 +48,7 @@ function HeroSection() {
         {' '}
         developer
       </motion.h2>
-      <p className="font-chivo py-3 md:text-l">
+      <p className="py-3 md:text-l opacity-80">
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
