@@ -3,7 +3,7 @@ import InfoList from '../components/InfoList';
 
 function AboutSection() {
   return (
-    <section className="bg-richBlack min-h-screen p-4 md:px-36 md:py-28 flex flex-col lg:flex-row">
+    <section className="bg-richBlack min-h-screen p-10 lg:px-36 lg:py-28 flex flex-col lg:flex-row">
       <div className="w-full lg:w-1/2 px-2">
         <h2 className="font-monts font-semibold text-magnolia text-5xl py-3">About me</h2>
         <p className="font-chivo py-3">

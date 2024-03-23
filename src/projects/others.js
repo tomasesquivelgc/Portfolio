@@ -2,35 +2,35 @@ const moreProjects = [
   {
     title: 'Space Travel',
     technologies: ['Javascript', 'React', 'Redux'],
-    description: 'Web App that allows users to navigate a list of rockets or missions and book them. The user can also navigate to their booked items. This app was built using the SpaceX API.',
+    description: 'Book a rocket or join a mission. With the SpaceX API, you can see the next launches and the rockets available for booking.',
     link: 'https://deploy-preview-36--guileless-halva-645039.netlify.app',
     codeLink: 'https://github.com/tomasesquivelgc/Space-Travelers-Hub',
   },
   {
     title: 'Super Transactions',
-    description: ['Ruby', 'Rails', 'PostgreSQL'],
-    paragraph: 'API-only app that allows users to create transactions and categories. The user can also see the transactions by category and the total amount of transactions. This app was built with Ruby on Rails.',
+    technologies: ['Ruby', 'Rails', 'PostgreSQL'],
+    description: 'Budget app to keep track of your transactions. Create categories and add transactions to them.',
     link: null,
     codeLink: 'https://github.com/tomasesquivelgc/Super-Transactions',
   },
   {
     title: 'Recipe App',
     technologies: ['Ruby', 'Rails', 'PostgreSQL'],
-    description: 'Web App that allows users to create, edit, and delete recipes. The user can also add ingredients and steps to the recipe, as well as deciding if their recipe is public or not.',
+    description: 'Look at public recipes or add your own by signing up. Keep track of your ingredients and the cost of your next meal.',
     link: null,
     codeLink: 'https://github.com/tomasesquivelgc/Recipe-app',
   },
   {
     title: 'Nitro Shows',
     technologies: ['Javascript', 'HTML5', 'CSS3', 'API'],
-    description: 'List of shows you can comment and like to recommend other users.',
+    description: 'Check out a list of shows from TVMaze API. Click on the different cards to see more information, comments and likes.',
     link: 'https://hafiz1379.github.io/JS-capstone-project/dist/',
     codeLink: 'https://github.com/tomasesquivelgc/JS-capstone-project',
   },
   {
     title: 'Blog App',
     technologies: ['Ruby', 'Rails', 'PostgreSQL'],
-    description: 'Simple blog app to post, comment and like each others thoughts.',
+    description: 'Blog App where you can create articles, add comments and like them. Sign up to create your own articles.',
     link: null,
     codeLink: 'https://github.com/tomasesquivelgc/Blog-App',
   },
@@ -50,7 +50,11 @@ const moreProjects = [
   },
   {
     title: 'My things Catalog',
-    technologies: ['ruby', 'Json', 'SQL'],
-    description: 'Console app to store your games, books and albums and organize them by genre, author or label.'
-  }
+    technologies: ['Ruby', 'JSON', 'SQL'],
+    description: 'Ruby console app to store your games, books and albums and organize them by genre, author or label.',
+    link: null,
+    codeLink: 'https://github.com/tomasesquivelgc/My-Things-Catalog',
+  },
 ];
+
+export default moreProjects;

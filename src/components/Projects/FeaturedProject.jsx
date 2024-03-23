@@ -37,7 +37,7 @@ function FeaturedProject({ project, alignRight }) {
 
         <ul className={`flex gap-3 w-full ${alignRight ? 'justify-start' : 'justify-end'}`}>
           {project.technologies.map((tech) => (
-            <li key={tech} className="font-chivo text-argBlue py-2">
+            <li key={tech} className="font-gentium text-argBlue py-2">
               {tech}
             </li>
           ))}
