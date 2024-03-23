@@ -16,7 +16,7 @@ const OtherProject = ({ project }) => {
       onClick={handleClick}
       className="w-full hover:cursor-pointer light-title text-left bg-prussiaBlue justify-self-center p-7 h-full flex flex-col justify-between"
     >
-      <h4 className="font-monts text-2xl font-medium py-3">
+      <h4 className="text-2xl py-3">
         {project.title}
       </h4>
       <p className="py-3 opacity-80">

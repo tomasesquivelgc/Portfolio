@@ -10,19 +10,19 @@ function FeaturedProject({ project, alignRight }) {
       }`}
     >
 
-      <div className="w-full md:w-7/12 filter bg-rusViolet md:filter-none">
+      <div className="w-full md:w-7/12 filter bg-prussiaBlue md:filter-none">
         <motion.img
           whileHover={{ scale: 1.03, opacity: 1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.5 }}
-          className="w-full opacity-20 md:opacity-60"
+          className="w-full opacity-20 md:opacity-70"
           src={project.image}
           alt={project.title}
         />
       </div>
 
       <div className={`${alignRight ? 'md:text-left' : 'md:text-right md:left-2/4'} w-full h-full md:w-1/2 absolute top-0 left-0 z-10 flex flex-col justify-between md:justify-start`}>
-        <h4 className="font-monts text-3xl font-medium hover:text-argBlue pt-10 md:py-4">
+        <h4 className="text-2xl hover:text-argBlue pt-10 md:py-4">
           <a
             href={project.link}
             target="_blank"
@@ -32,7 +32,7 @@ function FeaturedProject({ project, alignRight }) {
           </a>
         </h4>
 
-        <p className="py-3 px-5 md:bg-prussiaBlue opacity-80">{project.description}</p>
+        <p className="py-3 px-5 md:bg-prussiaBlue opacity-90">{project.description}</p>
 
         <ul className={`flex gap-3 justify-center w-full ${alignRight ? 'md:justify-start' : 'md:justify-end'}`}>
           {project.technologies.map((tech) => (

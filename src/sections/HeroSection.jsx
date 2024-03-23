@@ -4,9 +4,9 @@ function HeroSection() {
   const sentence1 = 'Welcome.';
   const sentence2 = 'My name is ';
   return (
-    <section className="bg-night min-h-screen flex flex-col justify-center text-center p-4 md:p-16">
+    <section className="bg-night min-h-screen flex flex-col justify-center text-center">
       <motion.h1
-        className="font-monts font-extrabold text-4xl md:text-6xl py-3"
+        className="font-monts font-bold text-4xl md:text-6xl py-3"
       >
         {sentence1.split('').map((char, index) => (
           <motion.span
@@ -42,7 +42,7 @@ function HeroSection() {
         initial={{ opacity: 0, size: 0 }}
         animate={{ opacity: 1, size: 1 }}
         transition={{ duration: 2, delay: 3.5 }}
-        className="font-gentium text-3xl md:text-4xl text-magnolia italic py-3"
+        className="font-gentium text-3xl md:text-4xl italic py-3"
       >
         <span className="text-argBlue">Software</span>
         {' '}
