@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Modal from './Modal';
 
 function InfoList() {
@@ -13,19 +13,31 @@ function InfoList() {
   return (
     <div>
       <ul>
-        <li className='hover:cursor-pointer hover:text-argBlue'>
-          <span onClick={toggleHobbies}>Hobbies</span>
+        <li className="hover:cursor-pointer hover:text-argBlue">
+          <button type="button" onClick={toggleHobbies}>Hobbies</button>
         </li>
         {hobbiesExpanded && (
           <ul>
-            <li className='ml-5 border-b hover:cursor-pointer hover:text-argBlue' onClick={openModal}>Gaming</li>
-            <li className='ml-5 border-b hover:cursor-pointer hover:text-argBlue' onClick={openModal}>Music</li>
-            <li className='ml-5 border-b hover:cursor-pointer hover:text-argBlue' onClick={openModal}>Reading</li>
+            <li className="ml-5 border-b hover:cursor-pointer hover:text-argBlue">
+              <button type="button" onClick={openModal}>Gaming</button>
+            </li>
+            <li className="ml-5 border-b hover:cursor-pointer hover:text-argBlue">
+              <button type="button" onClick={openModal}>Music</button>
+            </li>
+            <li className="ml-5 border-b hover:cursor-pointer hover:text-argBlue">
+              <button type="button" onClick={openModal}>Reading</button>
+            </li>
           </ul>
         )}
-        <li className='hover:cursor-pointer hover:text-argBlue' onClick={openModal}>Soft Skills</li>
-        <li className='hover:cursor-pointer hover:text-argBlue' onClick={openModal}>Blog</li>
-        <li className='hover:cursor-pointer hover:text-argBlue' onClick={openModal}>Languages</li>
+        <li className="hover:cursor-pointer hover:text-argBlue">
+          <button type="button" onClick={openModal}>Music</button>
+        </li>
+        <li className="hover:cursor-pointer hover:text-argBlue">
+          <button type="button" onClick={openModal}>Music</button>
+        </li>
+        <li className="hover:cursor-pointer hover:text-argBlue">
+          <button type="button" onClick={openModal}>Languages</button>
+        </li>
       </ul>
 
       {modalOpen && <Modal handleClose={closeModal} text="Modal Content" />}

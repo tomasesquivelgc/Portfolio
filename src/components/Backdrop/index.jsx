@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
 const Backdrop = ({ children, onClick }) => (
@@ -12,5 +12,10 @@ const Backdrop = ({ children, onClick }) => (
     {children}
   </motion.div>
 );
+
+Backdrop.propTypes = {
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 export default Backdrop;

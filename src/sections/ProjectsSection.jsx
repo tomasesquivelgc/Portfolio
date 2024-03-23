@@ -1,8 +1,7 @@
-import React from 'react';
-import featured from '../projects/featured.js';
-import moreProjects from '../projects/others.js';
-import FeaturedProject from '../components/Projects/FeaturedProject.jsx';
-import OtherProject from '../components/Projects/OtherProject.jsx';
+import featured from '../projects/featured';
+import moreProjects from '../projects/others';
+import FeaturedProject from '../components/Projects/FeaturedProject';
+import OtherProject from '../components/Projects/OtherProject';
 
 function ProjectsSection() {
   return (
@@ -23,9 +22,9 @@ function ProjectsSection() {
       <div>
         <h3 className="text-xl font-gentium italic text-argBlue py-5">More projects</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {moreProjects.map((project, index) => (
+          {moreProjects.map((project) => (
             <OtherProject
-              key={index}
+              key={project.title}
               project={project}
             />
           ))}

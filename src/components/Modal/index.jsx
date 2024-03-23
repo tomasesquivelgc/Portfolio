@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import Backdrop from '../Backdrop';
 
@@ -29,6 +30,11 @@ const Modal = ({ handleClose, text }) => {
       </motion.div>
     </Backdrop>
   );
+};
+
+Modal.propTypes = {
+  handleClose: PropTypes.func.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default Modal;
