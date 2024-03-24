@@ -11,7 +11,7 @@ function InfoList() {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <div className="opacity-80">
+    <div>
       <ul>
         <li className="hover:cursor-pointer hover:text-argBlue">
           <button type="button" onClick={toggleHobbies}>Hobbies</button>
