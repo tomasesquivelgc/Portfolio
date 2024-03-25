@@ -15,7 +15,7 @@ function FeaturedProject({ project, alignRight }) {
           whileHover={{ scale: 1.03, opacity: 1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.5 }}
-          className="h-full min-w-max md:min-w-0 md:h-auto opacity-15 md:opacity-70"
+          className="h-full min-w-max md:min-w-0 md:h-auto opacity-15 md:opacity-80"
           src={project.image}
           alt={project.title}
         />

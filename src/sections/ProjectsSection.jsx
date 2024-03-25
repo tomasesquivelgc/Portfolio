@@ -1,5 +1,5 @@
-import featured from '../projects/featured';
-import moreProjects from '../projects/others';
+import featured from '../data/featured';
+import moreProjects from '../data/others';
 import FeaturedProject from '../components/Projects/FeaturedProject';
 import OtherProject from '../components/Projects/OtherProject';
 
