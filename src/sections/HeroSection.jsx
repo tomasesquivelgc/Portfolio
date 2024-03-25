@@ -4,7 +4,7 @@ function HeroSection() {
   const sentence1 = 'Welcome.';
   const sentence2 = 'My name is ';
   return (
-    <section className="bg-night min-h-screen flex flex-col justify-center text-center">
+    <section className="bg-night min-h-screen flex flex-col justify-center text-center px-10 py-20 md:px-16 lg:px-32">
       <motion.h1
         className="font-monts font-bold text-4xl md:text-6xl py-3"
       >

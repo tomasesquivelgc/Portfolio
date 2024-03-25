@@ -22,7 +22,7 @@ function FeaturedProject({ project, alignRight }) {
       </div>
 
       <div className={`${alignRight ? 'md:text-right ' : 'md:text-left'} w-full md:w-1/2 p-4 md:p-0 z-10 flex flex-col justify-between`}>
-        <h4 className="text-2xl hover:text-argBlue p-2 md:px-0">
+        <h4 className="text-3xl hover:text-argBlue md:px-0">
           <a
             href={project.link}
             target="_blank"
@@ -32,9 +32,9 @@ function FeaturedProject({ project, alignRight }) {
           </a>
         </h4>
 
-        <p className="p-2 md:bg-prussiaBlue opacity-90">{project.description}</p>
+        <p className="py-2 md:px-2 md:bg-prussiaBlue opacity-90">{project.description}</p>
 
-        <ul className={`p-2 md:px-0 flex gap-2 w-full flex-wrap ${alignRight ? 'md:justify-end' : 'md:justify-start'}`}>
+        <ul className={`py-2 md:px-0 flex gap-2 w-full flex-wrap ${alignRight ? 'md:justify-end' : 'md:justify-start'}`}>
           {project.technologies.map((tech) => (
             <li key={tech} className="font-chivo text-argBlue py-2">
               {tech}

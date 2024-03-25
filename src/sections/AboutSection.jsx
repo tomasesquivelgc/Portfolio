@@ -2,8 +2,8 @@ import InfoList from '../components/InfoList';
 
 function AboutSection() {
   return (
-    <section className="bg-richBlack min-h-screen p-10 lg:px-36 lg:py-28 flex flex-col md:flex-row-reverse">
-      <div className="w-full lg:w-1/2 px-2">
+    <section className="bg-richBlack min-h-screen px-10 py-20 md:px-16 lg:px-32 flex flex-col md:flex-row-reverse">
+      <div className="w-full lg:w-1/2">
         <h2 className="font-medium text-5xl py-3">About me</h2>
         <p className="py-3 opacity-80">
           From a young age my dream was to become an inventor.
