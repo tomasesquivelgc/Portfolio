@@ -4,7 +4,7 @@ import ProjectsSection from './sections/ProjectsSection';
 import ContactSection from './sections/ContactSection';
 import SkillsSection from './sections/SkillsSection';
 import Recommend from './sections/RecommendSection';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navigation/Navbar';
 
 function App() {
   return (

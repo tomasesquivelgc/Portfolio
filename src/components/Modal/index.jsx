@@ -14,7 +14,7 @@ const Modal = ({ handleClose, text }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="bg-richBlack opacity-100 p-4 rounded-lg fixed lg:max-w-1/2 w-11/12 h-1/2 m-auto flex flex-col align-center"
+        className="bg-richBlack opacity-100 p-4 rounded-lg fixed lg:max-w-1/2 w-11/12 h-1/2 m-auto flex flex-col align-center z-50"
         initial="hidden"
         animate="visible"
         exit="exit"
