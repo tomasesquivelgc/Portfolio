@@ -53,7 +53,6 @@ FeaturedProject.defaultProps = {
 
 FeaturedProject.propTypes = {
   project: PropTypes.shape({
-    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
