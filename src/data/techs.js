@@ -80,7 +80,7 @@ const stack = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
   },
   {
-    tiotle: 'Nodejs',
+    title: 'Nodejs',
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
   }
 ];

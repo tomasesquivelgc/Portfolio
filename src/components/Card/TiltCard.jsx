@@ -1,11 +1,12 @@
 import React from "react";
 import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
 
 const defaultOptions = {
 	reverse:        false,  // reverse the tilt direction
 	max:            35,     // max tilt rotation (degrees)
 	perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
-	scale:          1.1,    // 2 = 200%, 1.5 = 150%, etc..
+	scale:          1,    // 2 = 200%, 1.5 = 150%, etc..
 	speed:          1000,   // Speed of the enter/exit transition
 	transition:     true,   // Set a transition on enter/exit.
 	axis:           null,   // What axis should be disabled. Can be X or Y.
@@ -15,9 +16,17 @@ const defaultOptions = {
 
 const Card = ({ title, icon }) => {
   return (
-    <Tilt options={defaultOptions} className="relative w-10 h-10 md:w-20 md:h-20 rounded-lg shadow-lg overflow-hidden flex bg-gradient-to-br from-argBlue to-richBlack">
-      <img className="w-full h-full object-cover m-auto" src={icon} alt={title} />
-    </Tilt>
+    <motion.div
+    drag
+    dragElastic={0.1}
+    whileHover={{ scale: 1.1 }}
+    className="flex flex-col items-center w-full h-full">
+      <Tilt options={defaultOptions} className="relative w-14 h-14 md:w-20 md:h-20 rounded-lg justify-center shadow-lg overflow-hidden flex bg-gradient-to-br from-richBlack via-argBlue to-magnolia">
+        <img className="w-full h-full object-cover m-auto" src={icon} alt={title} />
+      </Tilt>
+      <h3 className="text-center text-lg md:text-2xl font-chivo text-magnolia opacity-80 py-3">{title}</h3>
+    </motion.div>
+    
   );
 };
 
