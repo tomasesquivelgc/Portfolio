@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import MobileMenu from './MobileMenu';
 import DesktopMenu from './DesktopMenu';
 
@@ -40,9 +39,8 @@ const Navbar = () => {
       <DesktopMenu navBgColor={navBgColor} />
       <MobileMenu navBgColor={navBgColor} />
     </>
-      
-    
+
   );
-}
+};
 
 export default Navbar;

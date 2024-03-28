@@ -2,24 +2,24 @@ import { motion } from 'framer-motion';
 
 function HeroSection() {
   return (
-    <section id='home' className="bg-night min-h-screen flex flex-col justify-center text-center px-10 py-20 md:px-16 lg:px-32 items-center">
+    <section id="home" className="bg-night min-h-screen flex flex-col justify-center text-center px-10 py-20 md:px-16 lg:px-32 items-center">
       <h1 className="font-monts font-bold text-4xl md:text-6xl py-3">
         <motion.span
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 2 }}
         >
           Welcome.
         </motion.span>
-        
+
         <br />
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 2 }}
-          >
-            My name is&nbsp;
-          </motion.span>
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 2 }}
+        >
+          My name is&nbsp;
+        </motion.span>
         <motion.span
           className="text-argBlue"
           initial={{ opacity: 0 }}

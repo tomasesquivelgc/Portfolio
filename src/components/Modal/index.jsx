@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import { Backdrop } from '../Backdrop';
+import Backdrop from '../Backdrop';
 
 const Modal = ({ handleClose, text }) => {
   useEffect(() => {
@@ -11,7 +11,7 @@ const Modal = ({ handleClose, text }) => {
     };
   }, []);
   return (
-    <Backdrop onClick={handleClose} justify={"justify-center"}>
+    <Backdrop onClick={handleClose} justify="justify-center">
       <motion.div
         onClick={(e) => e.stopPropagation()}
         className="bg-richBlack opacity-100 p-4 rounded-lg fixed lg:max-w-1/2 w-11/12 h-1/2 m-auto flex flex-col align-center z-50"

@@ -24,7 +24,7 @@ const OtherProject = ({ project }) => {
           {project.description}
         </p>
       </div>
-      
+
       <ul className="flex gap-x-4 py-2 flex-wrap opacity-60">
         {project.technologies.map((tech) => (
           <li

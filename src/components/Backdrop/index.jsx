@@ -16,6 +16,7 @@ const Backdrop = ({ children, onClick, justify }) => (
 Backdrop.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
+  justify: PropTypes.string.isRequired,
 };
 
-export { Backdrop };
+export default Backdrop;

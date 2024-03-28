@@ -5,7 +5,7 @@ import OtherProject from '../components/Projects/OtherProject';
 
 function ProjectsSection() {
   return (
-    <section id='projects' className="min-h-screen px-10 py-20 md:px-16 lg:px-32 bg-richBlack">
+    <section id="projects" className="min-h-screen px-10 py-20 md:px-16 lg:px-32 bg-richBlack">
       <h2 className="font-medium text-3xl md:text-5xl py-3">My projects</h2>
       <div>
         <h3 className="font-chivo text-2xl md:text-xl text-argBlue py-5">Featured projects</h3>

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 function FeaturedProject({ project, alignRight }) {
   return (
     <div
-      key={project.id}
+      key={project.title}
       className={`w-full md:w-full relative md:pb-20 min-h-80 flex my-2 md:my-4 lg:my-8 ${
         alignRight ? 'md:justify-end' : ''
       }`}
