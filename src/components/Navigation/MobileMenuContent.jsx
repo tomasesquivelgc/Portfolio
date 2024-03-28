@@ -6,18 +6,18 @@ const MobileMenuContent = ({handleClose}) => {
     <Backdrop onClick={handleClose} justify={"justify-start"}>
         <motion.nav
           onClick={(e) => e.stopPropagation()}
-          className="bg-richBlack  opacity-100 p-4 rounded-lg fixed lg:max-w-1/2 w-11/12 h-1/2 m-auto flex flex-col align-center z-50"
+          className="bg-richBlack items-center opacity-100 p-4 rounded-lg fixed lg:max-w-1/2 w-2/3 h-full m-auto flex flex-col z-50"
           initial="hidden"
           animate="visible"
           exit="exit"
         >
-          <ul>
-            <li>Home</li>
-            <li>Projects</li>
-            <li>Skills</li>
-            <li>About me</li>
-            <li>Recommendations</li>
-            <li>Contact</li>
+          <ul className="h-full flex flex-col w-full justify-center">
+            <li><a href="#home" onClick={handleClose}>Home</a></li>
+            <li><a href="#projects" onClick={handleClose}>Projects</a></li>
+            <li><a href="#skills" onClick={handleClose}>Skills</a></li>
+            <li><a href="#about" onClick={handleClose}>About me</a></li>
+            <li><a href="#recommendations" onClick={handleClose}>Recommendations</a></li>
+            <li><a href="#contact" onClick={handleClose}>Contact</a></li>
           </ul>
         </motion.nav>
       </Backdrop>
