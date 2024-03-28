@@ -11,10 +11,10 @@ const Modal = ({ handleClose, text }) => {
     };
   }, []);
   return (
-    <Backdrop onClick={handleClose}>
+    <Backdrop onClick={handleClose} justify="justify-center">
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="bg-richBlack p-4 rounded-lg fixed lg:max-w-1/2 w-11/12 h-1/2 m-auto flex flex-col align-center"
+        className="bg-richBlack opacity-100 p-4 rounded-lg fixed lg:max-w-1/2 w-11/12 h-1/2 m-auto flex flex-col align-center z-50"
         initial="hidden"
         animate="visible"
         exit="exit"
@@ -22,7 +22,7 @@ const Modal = ({ handleClose, text }) => {
         <p className="">{text}</p>
         <motion.button
           whileHover={{ scale: 1.1 }}
-          className="bg-argBluepy-2 px-4 rounded-lg hover:bg-argBlueDark"
+          className="bg-argBlue py-2 px-4 rounded-lg hover:bg-argBlueDark"
           onClick={handleClose}
         >
           Close
