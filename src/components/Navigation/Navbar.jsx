@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import Hamburger from './Hamburger';
+import MobileMenu from './MobileMenu';
 import DesktopMenu from './DesktopMenu';
 
 const Navbar = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <>
       <DesktopMenu navBgColor={navBgColor} />
-      <Hamburger navBgColor={navBgColor} />
+      <MobileMenu navBgColor={navBgColor} />
     </>
       
     

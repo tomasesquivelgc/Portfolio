@@ -1,9 +1,22 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import MobileMenuContent from './MobileMenuContent';
 
-const Hamburger = ({ navBgColor }) => {
+const MobileMenu = ({ navBgColor }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleBackdropClose =(e) => {
+    if (e.target === e.currentTarget) {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <div className="fixed z-30 md:hidden p-2">
-        <button aria-label='mobile menu' className="relative group">
+        <button onClick={handleClick} aria-label='mobile menu' className="relative group z-50">
           <motion.div 
           initial={{ backgroundColor: 'rgba(0, 0, 0, 0)' }}
           animate={{ backgroundColor: navBgColor }}
@@ -21,8 +34,9 @@ const Hamburger = ({ navBgColor }) => {
             </div>
           </motion.div>
         </button>
-      </div>
+        {isOpen && <MobileMenuContent handleClose={handleBackdropClose} />}
+    </div>
   );
 }
 
-export default Hamburger;
+export default MobileMenu;
