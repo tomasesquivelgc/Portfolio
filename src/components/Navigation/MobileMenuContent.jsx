@@ -12,12 +12,12 @@ const MobileMenuContent = ({handleClose}) => {
           exit="exit"
         >
           <ul className="h-full flex flex-col w-full justify-center">
-            <li><a href="#home" onClick={handleClose}>Home</a></li>
-            <li><a href="#projects" onClick={handleClose}>Projects</a></li>
-            <li><a href="#skills" onClick={handleClose}>Skills</a></li>
-            <li><a href="#about" onClick={handleClose}>About me</a></li>
-            <li><a href="#recommendations" onClick={handleClose}>Recommendations</a></li>
-            <li><a href="#contact" onClick={handleClose}>Contact</a></li>
+            <li className="py-2"><a className="text-xl border-b-2 py-2 border-argBlue block w-full h-full" href="#home" onClick={handleClose}>Home</a></li>
+            <li className="py-2"><a className="text-xl border-b-2 py-2 border-argBlue block w-full h-full" href="#projects" onClick={handleClose}>Projects</a></li>
+            <li className="py-2"><a className="text-xl border-b-2 py-2 border-argBlue block w-full h-full" href="#skills" onClick={handleClose}>Skills</a></li>
+            <li className="py-2"><a className="text-xl border-b-2 py-2 border-argBlue block w-full h-full" href="#about" onClick={handleClose}>About me</a></li>
+            <li className="py-2"><a className="text-xl border-b-2 py-2 border-argBlue block w-full h-full" href="#recommendations" onClick={handleClose}>Recommendations</a></li>
+            <li className="py-2"><a className="text-xl border-b-2 py-2 border-argBlue block w-full h-full" href="#contact" onClick={handleClose}>Contact</a></li>
           </ul>
         </motion.nav>
       </Backdrop>
