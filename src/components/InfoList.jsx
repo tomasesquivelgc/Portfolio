@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import Modal from './Modal';
 
 function InfoList() {
@@ -11,19 +12,47 @@ function InfoList() {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <div className='md:w-1/3 w-1/2 lg:w-1/4'>
-      <ul>
-      <li className="w-full h-full">
-          <button className='w-full h-full shadow-inner bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md' type="button" onClick={openModal}>Soft Skills</button>
+    <div className="md:w-1/3 w-1/2 lg:w-1/4">
+      <ul className="flex flex-col gap-2">
+        <li className="w-full h-full">
+          <motion.button
+            className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
+            type="button"
+            onClick={openModal}
+            whileHover={{ scale: 1.1 }}
+          >
+            Soft Skills
+          </motion.button>
         </li>
-        <li className="hover:cursor-pointer hover:text-argBlue">
-          <button type="button" onClick={openModal}>Blog</button>
+        <li className="w-full h-full">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
+            type="button"
+            onClick={openModal}
+          >
+            Blog
+          </motion.button>
         </li>
-        <li className="hover:cursor-pointer hover:text-argBlue">
-          <button type="button" onClick={openModal}>Languages</button>
+        <li className="w-full h-full">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
+            type="button"
+            onClick={openModal}
+          >
+            Languages
+          </motion.button>
         </li>
-        <li className="hover:cursor-pointer hover:text-argBlue">
-          <button type="button" onClick={toggleHobbies}>Hobbies</button>
+        <li className="w-full h-full">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
+            type="button"
+            onClick={toggleHobbies}
+          >
+            Hobbies
+          </motion.button>
         </li>
         {hobbiesExpanded && (
           <ul>
@@ -38,7 +67,7 @@ function InfoList() {
             </li>
           </ul>
         )}
-        
+
       </ul>
 
       {modalOpen && <Modal handleClose={closeModal} text="Modal Content" />}
