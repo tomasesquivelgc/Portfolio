@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Modal from './Modal';
 import { motion } from 'framer-motion';
-import { skills, languages } from '../data/aboutMe';
+import { skills, languages, games, music, books, blog } from '../data/aboutMe';
 
 function InfoList() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -35,7 +35,7 @@ function InfoList() {
             whileHover={{ scale: 1.1 }}
             className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md'
             type="button"
-            onClick={() => openModal(skills)}
+            onClick={() => openModal(blog)}
           >
             Blog
           </motion.button>
@@ -63,17 +63,17 @@ function InfoList() {
         {hobbiesExpanded && (
           <ul>
             <li className="ml-5 border-b hover:cursor-pointer hover:text-argBlue">
-              <button type="button" onClick={() => openModal(skills)}>
+              <button type="button" onClick={() => openModal(games)}>
                 Gaming
               </button>
             </li>
             <li className="ml-5 border-b hover:cursor-pointer hover:text-argBlue">
-              <button type="button" onClick={() => openModal(skills)}>
+              <button type="button" onClick={() => openModal(music)}>
                 Music
               </button>
             </li>
             <li className="ml-5 border-b hover:cursor-pointer hover:text-argBlue">
-              <button type="button" onClick={() => openModal(skills)}>
+              <button type="button" onClick={() => openModal(books)}>
                 Reading
               </button>
             </li>
