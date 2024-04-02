@@ -22,11 +22,11 @@ const ModalInfo = ({info}) => {
         {info.map((info) => (
           <Tilt
           options={defaultOptions}
-          className="md:w-1/4 w-full relative border border-magnolia bg-prussiaBlue" key={info.title}>
+          className="md:w-1/4 w-full relative border border-magnolia bg-prussiaBlue h-24 md:h-auto" key={info.title}>
             <div className="w-full h-full flex items-center justify-center overflow-hidden">
               <img className="max-h-full min-h-full max-w-none" src={info.image} alt={info.title} />
             </div>
-            <div className="absolute bottom-0 w-full bg-night opacity-75 p-4">
+            <div className="absolute bottom-0 w-full bg-night opacity-75 h-full p-4 max-h-full">
               <h2 className="">{info.title}</h2>
               <p>{info.description}</p>
             </div>
