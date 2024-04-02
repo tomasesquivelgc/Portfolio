@@ -1,24 +1,30 @@
 import { useState } from 'react';
 import Modal from './Modal';
 import { motion } from 'framer-motion';
-import { skills } from '../data/aboutMe';
+import { skills, languages } from '../data/aboutMe';
 
 function InfoList() {
-  const info = skills;
   const [modalOpen, setModalOpen] = useState(false);
   const [hobbiesExpanded, setHobbiesExpanded] = useState(false);
+  const [modalInfo, setModalInfo] = useState(null);
 
   const toggleHobbies = () => setHobbiesExpanded(!hobbiesExpanded);
 
-  const openModal = () => setModalOpen(true);
+  const openModal = (info) => {
+    setModalInfo(info);
+    setModalOpen(true);
+  };
+
   const closeModal = () => setModalOpen(false);
 
   return (
     <div className='md:w-1/3 w-1/2 lg:w-1/4'>
       <ul className='flex flex-col gap-2'>
-      <li className="w-full h-full">
+        <li className="w-full h-full">
           <motion.button
-            className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md' type="button" onClick={openModal}
+            className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md'
+            type="button"
+            onClick={() => openModal(skills)}
             whileHover={{ scale: 1.1 }}
           >
             Soft Skills
@@ -26,36 +32,56 @@ function InfoList() {
         </li>
         <li className="w-full h-full">
           <motion.button
-          whileHover={{ scale: 1.1 }}
-          className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md' type="button" onClick={openModal}>Blog</motion.button>
+            whileHover={{ scale: 1.1 }}
+            className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md'
+            type="button"
+            onClick={() => openModal(skills)}
+          >
+            Blog
+          </motion.button>
         </li>
         <li className="w-full h-full">
           <motion.button
-          whileHover={{ scale: 1.1 }}
-          className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md' type="button" onClick={openModal}>Languages</motion.button>
+            whileHover={{ scale: 1.1 }}
+            className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md'
+            type="button"
+            onClick={() => openModal(languages)}
+          >
+            Languages
+          </motion.button>
         </li>
         <li className="w-full h-full">
           <motion.button
-          whileHover={{ scale: 1.1 }}
-          className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md' type="button" onClick={toggleHobbies}>Hobbies</motion.button>
+            whileHover={{ scale: 1.1 }}
+            className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md'
+            type="button"
+            onClick={toggleHobbies}
+          >
+            Hobbies
+          </motion.button>
         </li>
         {hobbiesExpanded && (
           <ul>
             <li className="ml-5 border-b hover:cursor-pointer hover:text-argBlue">
-              <button type="button" onClick={openModal}>Gaming</button>
+              <button type="button" onClick={() => openModal(skills)}>
+                Gaming
+              </button>
             </li>
             <li className="ml-5 border-b hover:cursor-pointer hover:text-argBlue">
-              <button type="button" onClick={openModal}>Music</button>
+              <button type="button" onClick={() => openModal(skills)}>
+                Music
+              </button>
             </li>
             <li className="ml-5 border-b hover:cursor-pointer hover:text-argBlue">
-              <button type="button" onClick={openModal}>Reading</button>
+              <button type="button" onClick={() => openModal(skills)}>
+                Reading
+              </button>
             </li>
           </ul>
         )}
-        
       </ul>
 
-      {modalOpen && <Modal handleClose={closeModal} info={info} />}
+      {modalOpen && <Modal handleClose={closeModal} info={modalInfo} />}
     </div>
   );
 }
