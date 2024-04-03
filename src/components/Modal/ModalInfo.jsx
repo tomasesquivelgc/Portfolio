@@ -30,12 +30,9 @@ const ModalInfo = ({ info }) => {
               className={`absolute bottom-0 right-0 md:left-0 h-full md:h-1/2 w-1/2 md:w-full bg-night opacity-80 p-4 ${
                 expandedItem === index ? 'md:h-full w-full' : ''
               }`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
             >
-              <h4 className="text-lg md:text-base lg:text-lg">{data.title}</h4>
-              <p className="text-argBlue">{data.description}</p>
+              <h4 className="text-lg md:text-base lg:text-lg md:pt-2">{data.title}</h4>
+              <p className="text-argBlue pb-2 md:pb-4">{data.description}</p>
               {expandedItem === index && <p>{data.expanded}</p>}
             </motion.div>
           </motion.div>
