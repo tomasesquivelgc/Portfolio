@@ -16,7 +16,7 @@ const ModalInfo = ({ info }) => {
           <motion.div
             className={`md:w-1/3 w-full border-2 border-argBlue relative bg-prussiaBlue h-1/3 md:h-auto flex md:flex-col ${
               expandedItem === index ? 'md:h-auto' : ''
-            }`}
+            } transition-all duration-500 ease-in-out`}
             key={index}
             onClick={() => setExpandedItem(index)}
             initial={{ opacity: 0 }}
@@ -29,11 +29,19 @@ const ModalInfo = ({ info }) => {
             <motion.div
               className={`absolute bottom-0 right-0 md:left-0 h-full md:h-1/2 w-1/2 md:w-full bg-night opacity-80 p-4 ${
                 expandedItem === index ? 'md:h-full w-full' : ''
-              }`}
+              } transition-all duration-500 ease-in-out`}
             >
               <h4 className="text-lg md:text-base lg:text-lg md:pt-2">{data.title}</h4>
               <p className="text-argBlue pb-2 md:pb-4">{data.description}</p>
-              {expandedItem === index && <p>{data.expanded}</p>}
+              {expandedItem === index && (
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.3 }}
+                >
+                  {data.expanded}
+                </motion.p>
+              )}
             </motion.div>
           </motion.div>
         ))}
@@ -41,6 +49,7 @@ const ModalInfo = ({ info }) => {
     </div>
   );
 };
+
 ModalInfo.propTypes = {
   info: PropTypes.shape({
     title: PropTypes.string.isRequired,

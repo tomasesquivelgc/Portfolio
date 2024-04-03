@@ -87,21 +87,21 @@ const games = {
     {
       title: 'Dark Souls 3',
       image: 'src/assets/about/games/ds3.webp',
-      description: '"What, Still here? Hand it over, that thing, your dark soul."',
-      expanded: 'A challenging action RPG with a dark fantasy setting. Proud to say I hold the platinum trophy on Steam.',
+      description: 'RPG, Difficult, Action.',
+      expanded: '"What, Still here? Hand it over, that thing, your dark soul." Proud to say I hold the platinum trophy on Steam.',
 
     },
     {
       title: 'League of Legends',
       image: 'src/assets/about/games/lol.webp',
-      description: '"Crews share the wealth."',
-      expanded: 'A comptetitive MOBA were teamwork and strategy are key to victory. My highest rank was Diamond 2 and my favorite champion is Pyke.',
+      description: 'MOBA, Competitive, Teamwork.',
+      expanded: '"Crews share the wealth." My highest rank was Diamond 2 and my favorite champion is Pyke.',
     },
     {
       title: 'ULTRAKILL',
       image: 'src/assets/about/games/ultrakill.webp',
-      description: 'MANKIND IS DEAD. BLOOD IS FUEL. HELL IS FULL.',
-      expanded: "Retro style movement shooter with fast paced action. I first discovered this game trhough it's incredible soundtrack.",
+      description: 'Retro, Movement-shooter, Fast-paced.',
+      expanded: '"MANKIND IS DEAD. BLOOD IS FUEL. HELL IS FULL." I first discovered this game trhough its incredible soundtrack.',
     },
   ],
 };
@@ -119,8 +119,8 @@ const music = {
     {
       title: 'Los Espiritus',
       image: 'src/assets/about/music/losespiritus.webp',
-      description: 'Rock, Blues and Folk.',
-      expanded: 'Argentinian band that combines elements from Rock and Blues with folk. I recommend the songs: "En Este Mundo No Hay Lugar" and "Vamos a la Luna"; And the album "Aguardiente".',
+      description: 'Argentinian Rock, Blues and Folk.',
+      expanded: 'band that combines Rock and Blues with folk. I recommend the songs: "En Este Mundo No Hay Lugar" and "Vamos a la Luna"; And the album "Aguardiente".',
     },
     {
       title: 'MF DOOM',
