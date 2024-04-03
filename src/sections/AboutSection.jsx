@@ -15,13 +15,15 @@ function AboutSection() {
           software development. Right now my focus is on web development but I hope to learn
           more tools to expand my horizons, such as AI and game engines.
         </p>
-        <div className='h-full'>
-          <p>If you must know one thing about me is that I love a good challenge.
-          I&apos;m always looking for new ways to improve and learn new things.
-          But if you want to know more, you can check the list below.</p>
+        <div className="h-full">
+          <p>
+            If you must know one thing about me is that I love a good challenge.
+            I&apos;m always looking for new ways to improve and learn new things.
+            But if you want to know more, you can check the list below.
+          </p>
           <InfoList />
         </div>
-       
+
       </div>
       <img src="src\assets\cropped_face.jpg" alt="thats me!" className="w-1/2 h-auto object-cover" />
     </section>

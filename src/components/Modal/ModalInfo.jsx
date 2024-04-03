@@ -1,9 +1,17 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const ModalInfo = ({ info }) => {
   const [expandedItem, setExpandedItem] = useState(null);
+
+  const handleExpand = (title) => {
+    if (expandedItem === title) {
+      return () => setExpandedItem(null);
+    }else{
+      return () => setExpandedItem(title);
+    }
+  }
 
   return (
     <div className="overflow-scroll md:overflow-visible">
@@ -12,13 +20,13 @@ const ModalInfo = ({ info }) => {
         <p className="">{info.text}</p>
       </div>
       <div className="flex flex-col md:flex-row gap-4 justify-around w-full h-full md:max-h-96 py-8">
-        {info.data.map((data, index) => (
+        {info.data.map((data) => (
           <motion.div
             className={`md:w-1/3 w-full border-2 border-argBlue relative bg-prussiaBlue h-1/3 md:h-auto flex md:flex-col ${
-              expandedItem === index ? 'md:h-auto' : ''
+              expandedItem === data.title ? 'md:h-auto' : ''
             } transition-all duration-500 ease-in-out`}
-            key={index}
-            onClick={() => setExpandedItem(index)}
+            key={data.title}
+            onClick={handleExpand(data.title)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -28,12 +36,12 @@ const ModalInfo = ({ info }) => {
             </div>
             <motion.div
               className={`absolute bottom-0 right-0 md:left-0 h-full md:h-1/2 w-1/2 md:w-full bg-night opacity-80 p-4 ${
-                expandedItem === index ? 'md:h-full w-full' : ''
+                expandedItem === data.title ? 'md:h-full w-full' : ''
               } transition-all duration-500 ease-in-out`}
             >
               <h4 className="text-lg md:text-base lg:text-lg md:pt-2">{data.title}</h4>
               <p className="text-argBlue pb-2 md:pb-4">{data.description}</p>
-              {expandedItem === index && (
+              {expandedItem === data.title && (
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}

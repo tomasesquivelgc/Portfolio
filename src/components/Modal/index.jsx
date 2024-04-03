@@ -21,16 +21,16 @@ const Modal = ({ handleClose, info }) => {
         exit="exit"
       >
         <ModalInfo info={info} />
-          <div className='flex justify-center'>
-            <motion.button
-              whileHover={{ scale: 1.03 }}
-              className="bg-argBlue px-4 py-2 rounded-lg hover:bg-argBlueDark w-1/2 align-middle"
-              onClick={handleClose}
-            >
-              Close
-            </motion.button> 
-          </div>
-            
+        <div className="flex justify-center">
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            className="bg-argBlue px-4 py-2 rounded-lg hover:bg-argBlueDark w-1/2 align-middle"
+            onClick={handleClose}
+          >
+            Close
+          </motion.button>
+        </div>
+
       </motion.div>
     </Backdrop>
   );
