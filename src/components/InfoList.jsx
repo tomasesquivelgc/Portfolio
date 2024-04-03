@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import Modal from './Modal';
 import { motion } from 'framer-motion';
-import { skills, languages, games, music, books, blog } from '../data/aboutMe';
+import Modal from './Modal';
+import {
+  skills, languages, games, music, books, blog,
+} from '../data/aboutMe';
 
 function InfoList() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -18,11 +20,11 @@ function InfoList() {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <div className='md:w-1/3 w-1/2'>
-      <ul className='flex flex-col gap-2'>
+    <div className="md:w-1/3 w-1/2">
+      <ul className="flex flex-col gap-2">
         <li className="w-full h-full">
           <motion.button
-            className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md'
+            className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
             type="button"
             onClick={() => openModal(skills)}
             whileHover={{ scale: 1.1 }}
@@ -33,7 +35,7 @@ function InfoList() {
         <li className="w-full h-full">
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md'
+            className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
             type="button"
             onClick={() => openModal(blog)}
           >
@@ -43,7 +45,7 @@ function InfoList() {
         <li className="w-full h-full">
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md'
+            className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
             type="button"
             onClick={() => openModal(languages)}
           >
@@ -53,7 +55,7 @@ function InfoList() {
         <li className="w-full h-full">
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className='w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md'
+            className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
             type="button"
             onClick={toggleHobbies}
           >
