@@ -3,14 +3,16 @@ const skills = {
   text: "I have a wide range of skills that I have developed over the years. Here are some of them:",
   data : [
     {
-      title: "Personal Skills",
+      title: "Intrapersonal Skills",
       image: "src/assets/about/skills/personalskills.webp",
-      description: "Responsability, creativity, time management, patience, problem solving and adaptability."
+      description: "Set of abilities & tools for my personal growth.",
+      expanded: "Responsability, creativity, time management, patience, problem solving and adaptability."
     },
     {
       title: "Interpersonal Skills",
       image: "src/assets/about/skills/interpesonalskills.webp",
-      description: "Communication, teamwork, leadership, empathy, active listening and conflict resolution."
+      description: "Social skills that I have developed over the years.",
+      expanded: "Communication, teamwork, leadership, empathy, active listening and conflict resolution."
     }
 ]};
 
@@ -21,12 +23,14 @@ const languages = {
   {
     title: "Spanish",
     image: "src/assets/about/languages/spanish.webp",
-    description: "Native language."
+    description: "Native language.",
+    expanded: "Born and raised in Argentina."
   },
   {
     title: "English",
     image: "src/assets/about/languages/english.webp",
-    description: "Advanced level."
+    description: "Advanced level.",
+    expanded: "Cambridge English: Advanced (CAE) certificate. Studied since I was 5 years old."
   }
 ]};
 
@@ -37,12 +41,14 @@ const blog = {
   {
     title: "The Benefits of Regular Exercise on Mental Health",
     image: "src/assets/about/blog/regularexcercise.webp",
-    description: "How regular exercise can help you improve your mental health."
+    description: "Sep 2, 2023",
+    expanded: "A reflection on the importance of exercise for mental health from the perspective of a proggrammer."
   },
   {
     title: "Embracing the Chill: The Surprising Benefits of Cold Showers",
     image: "src/assets/about/blog/coldshower.webp",
-    description: "Cold showers can help you improve your mood and your health."
+    description: "Mar 16, 2024",
+    expanded: "A personal account of the benefits of cold showers and how they can improve your life."
   }
 ]};
 
@@ -53,17 +59,20 @@ const books = {
   {
     title: "A brief history of time",
     image: "src/assets/about/books/briefhistory.webp",
-    description: "An introduction to the world of physics."
+    description: "Stephen Hawking",
+    expanded: "A book meant for everyone, writen in non-technical language for the general public to understand the universe."
+  },
+  {
+    title: "Filosofia en 11 frases (Philosophy in 11 phrases)",
+    image: "src/assets/about/books/filosofiaen11.webp",
+    description: "Darío Sztajnszrajber",
+    expanded: "Argentinian Philosopher Darío \"Szeta\" analyzes 11 phrases that have marked the history of philosophy."
   },
   {
     title: "LSD: My problem child",
     image: "src/assets/about/books/lsdmyprob.webp",
-    description: "The story of how LSD was discovered and its effects on society."
-  },
-  {
-    title: "Filosofia en 11 frases",
-    image: "src/assets/about/books/filosofiaen11.webp",
-    description: "A brief introduction to philosophy."
+    description: "Albert Hofmann",
+    expanded: "A book by the discoverer of LSD, Albert Hofmann, where he tells the story of the discovery, experimentation and prohibition of the substance."
   }
 ]};
 
@@ -74,17 +83,21 @@ const games = {
   {
     title: "Dark Souls 3",
     image: "src/assets/about/games/ds3.webp",
-    description: "A challenging action RPG."
+    description: "\"What, Still here? Hand it over, that thing, your dark soul.\"",
+    expanded: "A challenging action RPG with a dark fantasy setting. Proud to say I hold the platinum trophy on Steam.",
+
   },
   {
     title: "League of Legends",
     image: "src/assets/about/games/lol.webp",
-    description: "A popular MOBA game."
+    description: "\"Crews share the wealth.\"",
+    expanded: "A comptetitive MOBA were teamwork and strategy are key to victory. My highest rank was Diamond 2 and my favorite champion is Pyke."
   },
   {
-    title: "Ultrakill",
+    title: "ULTRAKILL",
     image: "src/assets/about/games/ultrakill.webp",
-    description: "A fast-paced retro FPS."
+    description: "MANKIND IS DEAD. BLOOD IS FUEL. HELL IS FULL.",
+    expanded: "Retro style movement shooter with fast paced action. I first discovered this game trhough it's incredible soundtrack."
   }
 ]};
 
@@ -95,17 +108,20 @@ const music = {
   {
     title: "Tommy Guerrero",
     image: "src/assets/about/music/tommyguerrero.webp",
-    description: "A mix of jazz, hip hop and rock."
+    description: "Rock and Trip Hop latin mix.",
+    expanded: "Proffesional skateboarder and multi-instrumentalist. I recommend the songs: \"Salve\" and \"It gets heavy\"; And the album \" Road to Knowhere\"."
   },
   {
-    title: "Serj Tankian",
-    image: "src/assets/about/music/serjtankian.webp",
-    description: "The lead singer of System of a Down."
+    title: "Los Espiritus",
+    image: "src/assets/about/music/losespiritus.webp",
+    description: "Rock, Blues and Folk.",
+    expanded: "Argentinian band that combines elements from Rock and Blues with folk. I recommend the songs: \"En Este Mundo No Hay Lugar\" and \"Vamos a la Luna\"; And the album \"Aguardiente\"."
   },
   {
     title: "MF DOOM",
     image: "src/assets/about/music/MFDOOM.webp",
-    description: "A rapper known for his intricate lyrics."
+    description: "Rap and Hip Hop.",
+    expanded: "Your favorite rapper's favorite rapper. I recommend the songs: \"Rapp Snitch Knishes\" and \"Doomsday\"; And the album \"Madvillainy\"."
   }
 ]};
 
