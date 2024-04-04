@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
+import { FaCode } from "react-icons/fa";
 
 const OtherProject = ({ project }) => {
   const handleClick = () => {
@@ -17,6 +18,7 @@ const OtherProject = ({ project }) => {
       className="w-full hover:cursor-pointer light-title text-left bg-prussiaBlue justify-self-center p-4 h-full flex flex-col justify-between"
     >
       <div>
+        <FaCode className="text-argBlue" />
         <h4 className="text-2xl">
           {project.title}
         </h4>
