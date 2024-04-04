@@ -8,10 +8,9 @@ const ModalInfo = ({ info }) => {
   const handleExpand = (title) => {
     if (expandedItem === title) {
       return () => setExpandedItem(null);
-    }else{
-      return () => setExpandedItem(title);
     }
-  }
+    return () => setExpandedItem(title);
+  };
 
   return (
     <div className="overflow-scroll md:overflow-visible">
