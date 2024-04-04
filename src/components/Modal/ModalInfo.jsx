@@ -35,8 +35,8 @@ const ModalInfo = ({ info }) => {
               <img className="max-h-full min-h-full max-w-none" src={data.image} alt={info.title} />
             </div>
             <motion.div
-              className={`absolute bottom-0 right-0 md:left-0 h-full md:h-1/2 w-1/2 md:w-full bg-night opacity-80 p-4 ${
-                expandedItem === data.title ? 'md:h-full w-full' : ''
+              className={`absolute bottom-0 right-0 md:left-0 h-full md:h-1/2 w-1/2 md:w-full bg-night p-4 ${
+                expandedItem === data.title ? 'md:h-full w-full opacity-100' : 'opacity-80'
               } transition-all duration-500 ease-in-out`}
             >
               <h4 className="text-lg md:text-base lg:text-lg md:pt-2">{data.title}</h4>

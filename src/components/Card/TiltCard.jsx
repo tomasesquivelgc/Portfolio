@@ -16,8 +16,6 @@ const defaultOptions = {
 
 const Card = ({ title, icon }) => (
   <motion.div
-    drag
-    dragElastic={0.1}
     whileHover={{ scale: 1.1 }}
     className="flex flex-col items-center w-full h-full"
   >

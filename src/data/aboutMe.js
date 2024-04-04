@@ -44,7 +44,7 @@ const blog = {
       title: 'The Benefits of Regular Exercise on Mental Health',
       image: 'src/assets/about/blog/regularexcercise.webp',
       description: 'Sep 2, 2023',
-      expanded: 'A reflection on the importance of exercise for mental health from the perspective of a proggrammer.',
+      expanded: 'A reflection on the importance of exercise for mental health from the perspective of a programmer.',
     },
     {
       title: 'Embracing the Chill: The Surprising Benefits of Cold Showers',
