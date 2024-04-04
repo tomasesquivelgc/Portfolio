@@ -34,7 +34,7 @@ function FeaturedProject({ project, alignRight }) {
 
         <p className="py-2 md:px-2 md:bg-prussiaBlue opacity-90">{project.description}</p>
 
-        <ul className={`py-2 md:px-0 flex gap-2 w-full flex-wrap ${alignRight ? 'md:justify-end' : 'md:justify-start'}`}>
+        <ul className={`py-2 md:px-0 flex gap-4 w-full flex-wrap ${alignRight ? 'md:justify-end' : 'md:justify-start'}`}>
           {project.technologies.map((tech) => (
             <li key={tech} className="font-chivo text-argBlue py-2">
               {tech}
