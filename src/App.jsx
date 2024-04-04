@@ -3,7 +3,6 @@ import AboutSection from './sections/AboutSection';
 import ProjectsSection from './sections/ProjectsSection';
 import ContactSection from './sections/ContactSection';
 import SkillsSection from './sections/SkillsSection';
-import Recommend from './sections/RecommendSection';
 import Navbar from './components/Navigation/Navbar';
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
       <ProjectsSection />
       <SkillsSection />
       <AboutSection />
-      <Recommend />
       <ContactSection />
     </>
   );

@@ -5,7 +5,7 @@ function FeaturedProject({ project, alignRight }) {
   return (
     <div
       key={project.title}
-      className={`w-full md:w-full relative  min-h-80 md:min-h-fit flex my-2 md:my-auto lg:my-8 ${
+      className={`w-full md:w-full relative  min-h-80 md:min-h-fit flex md:my-0 lg:my-8 ${
         alignRight ? 'md:justify-end' : ''
       }`}
     >

@@ -6,15 +6,14 @@ function HeroSection() {
       <motion.div
       initial={{ opacity: 0, x: -100}}
       animate={{ opacity: 1, x: 0}}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 1 }}
       >
-        <h1 className="font-monts font-bold text-4xl md:text-6xl py-1">
-          Welcome.<br />My name is&nbsp;
-          <span className="text-argBlue">
-            Tomás
-          </span>
+        <h1 className="font-monts font-bold w-full text-4xl md:text-6xl py-3">
+         Tomás&nbsp;
+         <span className='text-argBlue'>Esquivel</span>
+         
         </h1>
-        <h2 className="text-3xl font-medium md:text-4xl py-1">
+        <h2 className="text-2xl font-medium md:text-4xl py-1">
           <span className="text-argBlue">Full-stack</span>
           {' '}
           developer
@@ -23,10 +22,11 @@ function HeroSection() {
       <motion.div
       initial={{ opacity: 0, x: 100}}
       animate={{ opacity: 1, x: 0}}
-      transition={{ duration: 0.6}}
+      transition={{ duration: 1}}
       className='w-full flex justify-center'>
-        <p className="py-3 md:text-l opacity-80 w-1/2">
-          Design. Create. Innovate.
+        <p className="py-1 md:text-l opacity-80 w-full md:w-1/2">
+          Experienced in remote team projects and adapting to new challenges.
+          Eager to collaborate and build new things.
         </p>
       </motion.div>
     </section>

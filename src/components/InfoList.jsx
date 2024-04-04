@@ -20,7 +20,7 @@ function InfoList() {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <div className="md:w-1/3 w-1/2">
+    <div className="md:w-1/3 w-1/2 py-1">
       <ul className="flex flex-col gap-2">
         <li className="w-full h-full">
           <motion.button
