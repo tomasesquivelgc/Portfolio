@@ -20,7 +20,7 @@ function InfoList() {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <div className="md:w-1/3 w-1/2 py-1">
+    <div className="md:w-1/3 w-1/2 min-w-min py-1">
       <ul className="flex flex-col gap-2">
         <li className="w-full h-full">
           <motion.button
@@ -52,7 +52,7 @@ function InfoList() {
             Languages
           </motion.button>
         </li>
-        <li className="w-full h-full">
+        <li className="w-full h-full relative">
           <motion.button
             whileHover={{ scale: 1.1 }}
             className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
@@ -61,26 +61,26 @@ function InfoList() {
           >
             Hobbies
           </motion.button>
-        </li>
-        {hobbiesExpanded && (
-          <ul>
-            <li className="ml-5 border-b hover:cursor-pointer hover:text-argBlue">
+          {hobbiesExpanded && (
+          <ul className='absolute left-0 top-100'>
+            <li className="border-b hover:cursor-pointer hover:text-argBlue">
               <button type="button" onClick={() => openModal(games)}>
                 Gaming
               </button>
             </li>
-            <li className="ml-5 border-b hover:cursor-pointer hover:text-argBlue">
+            <li className="border-b hover:cursor-pointer hover:text-argBlue">
               <button type="button" onClick={() => openModal(music)}>
                 Music
               </button>
             </li>
-            <li className="ml-5 border-b hover:cursor-pointer hover:text-argBlue">
+            <li className="border-b hover:cursor-pointer hover:text-argBlue">
               <button type="button" onClick={() => openModal(books)}>
                 Reading
               </button>
             </li>
           </ul>
         )}
+        </li>
       </ul>
 
       {modalOpen && <Modal handleClose={closeModal} info={modalInfo} />}

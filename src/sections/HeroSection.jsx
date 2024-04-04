@@ -8,12 +8,12 @@ function HeroSection() {
       animate={{ opacity: 1, x: 0}}
       transition={{ duration: 1 }}
       >
-        <h1 className="font-monts font-bold w-full text-4xl md:text-6xl py-3">
+        <h1 className="font-monts font-bold w-full text-4xl md:text-6xl py-1">
          Tomás&nbsp;
          <span className='text-argBlue'>Esquivel</span>
          
         </h1>
-        <h2 className="text-2xl font-medium md:text-4xl py-1">
+        <h2 className="text-2xl font-semibold md:text-4xl py-1">
           <span className="text-argBlue">Full-stack</span>
           {' '}
           developer
@@ -24,7 +24,7 @@ function HeroSection() {
       animate={{ opacity: 1, x: 0}}
       transition={{ duration: 1}}
       className='w-full flex justify-center'>
-        <p className="py-1 md:text-l opacity-80 w-full md:w-1/2">
+        <p className="py-3 md:text-l opacity-80 w-full md:w-1/2 font-medium">
           Experienced in remote team projects and adapting to new challenges.
           Eager to collaborate and build new things.
         </p>

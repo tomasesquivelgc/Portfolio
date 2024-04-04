@@ -31,14 +31,14 @@ const languages = {
       title: 'English',
       image: 'src/assets/about/languages/english.webp',
       description: 'Advanced level.',
-      expanded: 'Cambridge English: Advanced (CAE) certificate. Studied since I was 5 years old.',
+      expanded: 'Cambridge Certificate in Advanced English (CAE/C1). Studied since I was 5 years old.',
     },
   ],
 };
 
 const blog = {
   title: 'Blog',
-  text: 'I like to write about my life, routine and mental health. Here are some of my blog posts:',
+  text: 'I like to write about my life, routine and mental health on Medium. Here are some of my blog posts:',
   data: [
     {
       title: 'The Benefits of Regular Exercise on Mental Health',
