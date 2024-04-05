@@ -120,7 +120,7 @@ const music = {
       title: 'Los Espiritus',
       image: 'src/assets/about/music/losespiritus.webp',
       description: 'Argentinian Rock, Blues and Folk.',
-      expanded: 'band that combines Rock and Blues with folk. I recommend the songs: "En Este Mundo No Hay Lugar" and "Vamos a la Luna"; And the album "Aguardiente".',
+      expanded: 'Band that combines Rock and Blues with folk. I recommend the songs: "En Este Mundo No Hay Lugar" and "Vamos a la Luna"; And the album "Aguardiente".',
     },
     {
       title: 'MF DOOM',
