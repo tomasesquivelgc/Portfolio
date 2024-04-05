@@ -107,8 +107,9 @@ function InfoList() {
           </AnimatePresence>
         </li>
       </ul>
-
-      {modalOpen && <Modal handleClose={closeModal} info={modalInfo} />}
+      <AnimatePresence>
+        {modalOpen && <Modal handleClose={closeModal} info={modalInfo} />}
+      </AnimatePresence>
     </div>
   );
 }
