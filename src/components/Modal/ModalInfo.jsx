@@ -31,7 +31,7 @@ const ModalInfo = ({ info }) => {
             transition={{ duration: 1, delay: index * 0.1}}
           >
             <div className="w-full h-full flex md:items-center md:justify-center overflow-hidden">
-              <img className="max-h-full min-h-full max-w-none" src={data.image} alt={info.title} />
+              <img className="max-h-full min-h-full max-w-none" src={data.image} alt={info.title} loading='lazy' />
             </div>
             <motion.div
               className={`absolute bottom-0 right-0 md:left-0 h-full md:h-1/2 w-1/2 md:w-full bg-night p-4 ${

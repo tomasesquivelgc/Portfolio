@@ -22,12 +22,12 @@ const OtherProject = ({ project }) => {
         <h4 className="text-2xl">
           {project.title}
         </h4>
-        <p className="py-2 opacity-80">
+        <p className="py-2 opacity-90">
           {project.description}
         </p>
       </div>
 
-      <ul className="flex gap-x-4 py-2 flex-wrap opacity-60">
+      <ul className="flex gap-x-4 py-2 flex-wrap">
         {project.technologies.map((tech) => (
           <li
             className="font-chivo text-argBlue"

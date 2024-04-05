@@ -3,17 +3,17 @@ function ContactForm() {
     <form action="https://formspree.io/f/xwkjrkqw" method="post" className="flex flex-col w-full md:w-1/2 py-3">
       <label htmlFor="full-name">
         Full name:
-        <input className="w-full" id="full-name" type="text" name="name" placeholder="Full name" maxLength="30" required />
+        <input className="w-full bg-magnolia" id="full-name" type="text" name="name" placeholder="Full name" maxLength="30" required />
       </label>
 
       <label htmlFor="email">
         Email:
-        <input className="w-full" id="email" type="email" name="email" placeholder="Email address" required />
+        <input className="w-full bg-magnolia" id="email" type="email" name="email" placeholder="Email address" required />
       </label>
 
-      <textarea id="msg" name="user_message" maxLength="500" placeholder="Write me something..." required />
+      <textarea className="bg-magnolia" id="msg" name="user_message" maxLength="500" placeholder="Write me something..." required />
 
-      <input type="submit" value="Submit" />
+      <input className="p-2 w-full" type="submit" value="Submit" />
     </form>
   );
 }

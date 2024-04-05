@@ -21,7 +21,7 @@ function ProjectsSection() {
       </div>
       <div className='py-3'>
         <h3 className="text-2xl md:text-xl font-chivo text-argBlue py-1">More projects</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10 gap-4 py-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-3">
           {moreProjects.map((project) => (
             <OtherProject
               key={project.title}
