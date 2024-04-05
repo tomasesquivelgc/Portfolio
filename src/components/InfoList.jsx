@@ -21,11 +21,11 @@ function InfoList() {
   const closeModal = () => setModalOpen(false);
 
   return (
-    <div className="md:w-1/3 w-1/2 min-w-min py-1 text-night font-medium">
-      <ul className="flex flex-col gap-2">
+    <div className=" w-full min-w-min py-1">
+      <ul className="grid grid-cols-2 gap-2 text-night font-medium">
         <li className="w-full h-full">
           <motion.button
-            className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
+            className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
             type="button"
             onClick={() => openModal(skills)}
             whileHover={{ scale: 1.1 }}
@@ -36,7 +36,7 @@ function InfoList() {
         <li className="w-full h-full">
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
+            className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
             type="button"
             onClick={() => openModal(blog)}
           >
@@ -46,7 +46,7 @@ function InfoList() {
         <li className="w-full h-full">
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
+            className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
             type="button"
             onClick={() => openModal(languages)}
           >
@@ -56,7 +56,7 @@ function InfoList() {
         <li className="w-full h-full relative">
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className="w-full h-full bg-argBlue  tracking-wider text-xl  p-1 md:text-base rounded-md"
+            className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
             type="button"
             onClick={toggleHobbies}
           >
@@ -66,41 +66,47 @@ function InfoList() {
           <AnimatePresence>
             {hobbiesExpanded && (
               <motion.ul
-                className='absolute left-0 top-100'
+                className='absolute left-0 top-100 flex flex-col gap-1 py-1'
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
               >
                 <motion.li
-                  className="border-b hover:cursor-pointer hover:text-argBlue"
+                  className="border"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <button type="button" onClick={() => openModal(games)}>
+                  <motion.button
+                  whileHover={{scale: 1.1}}
+                  type="button" className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md" onClick={() => openModal(games)}>
                     Gaming
-                  </button>
+                  </motion.button>
                 </motion.li>
                 <motion.li
-                  className="border-b hover:cursor-pointer hover:text-argBlue"
+                  className="border-b"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.1 }}
                 >
-                  <button type="button" onClick={() => openModal(music)}>
+                  <motion.button
+                  whileHover={{scale: 1.1}}
+                  className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md" type="button" onClick={() => openModal(music)}>
                     Music
-                  </button>
+                  </motion.button>
                 </motion.li>
                 <motion.li
-                  className="border-b hover:cursor-pointer hover:text-argBlue"
+                  className="border-b"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.2 }}
                 >
-                  <button type="button" onClick={() => openModal(books)}>
+                  <motion.button
+                  whileHover={{scale: 1.1}}
+                  className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md" type="button" onClick={() => openModal(books)}>
                     Reading
-                  </button>
+                  </motion.button>
                 </motion.li>
               </motion.ul>
             )}
