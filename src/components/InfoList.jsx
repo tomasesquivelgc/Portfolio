@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Modal from './Modal';
 import {
   skills, languages, games, music, books, blog,
 } from '../data/aboutMe';
+import { IoIosArrowDown } from "react-icons/io";
 
 function InfoList() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -60,26 +61,50 @@ function InfoList() {
             onClick={toggleHobbies}
           >
             Hobbies
+          <IoIosArrowDown className={`inline transition-all ${hobbiesExpanded ? "rotate-180" : ""}`} />
           </motion.button>
-          {hobbiesExpanded && (
-          <ul className='absolute left-0 top-100'>
-            <li className="border-b hover:cursor-pointer hover:text-argBlue">
-              <button type="button" onClick={() => openModal(games)}>
-                Gaming
-              </button>
-            </li>
-            <li className="border-b hover:cursor-pointer hover:text-argBlue">
-              <button type="button" onClick={() => openModal(music)}>
-                Music
-              </button>
-            </li>
-            <li className="border-b hover:cursor-pointer hover:text-argBlue">
-              <button type="button" onClick={() => openModal(books)}>
-                Reading
-              </button>
-            </li>
-          </ul>
-        )}
+          <AnimatePresence>
+            {hobbiesExpanded && (
+              <motion.ul
+                className='absolute left-0 top-100'
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.li
+                  className="border-b hover:cursor-pointer hover:text-argBlue"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <button type="button" onClick={() => openModal(games)}>
+                    Gaming
+                  </button>
+                </motion.li>
+                <motion.li
+                  className="border-b hover:cursor-pointer hover:text-argBlue"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                >
+                  <button type="button" onClick={() => openModal(music)}>
+                    Music
+                  </button>
+                </motion.li>
+                <motion.li
+                  className="border-b hover:cursor-pointer hover:text-argBlue"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.2 }}
+                >
+                  <button type="button" onClick={() => openModal(books)}>
+                    Reading
+                  </button>
+                </motion.li>
+              </motion.ul>
+            )}
+          </AnimatePresence>
         </li>
       </ul>
 
