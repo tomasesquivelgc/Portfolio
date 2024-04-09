@@ -47,7 +47,7 @@ const blog = {
       expanded: 'A reflection on the importance of exercise for mental health from the perspective of a programmer.',
     },
     {
-      title: 'Embracing the Chill: The Surprising Benefits of Cold Showers',
+      title: 'Embracing the Chill: Surprising Benefits of Cold Showers',
       image: 'about/blog/coldshower.webp',
       description: 'Mar 16, 2024',
       expanded: 'A personal account of the benefits of cold showers and how they can improve your life.',
@@ -114,13 +114,13 @@ const music = {
       title: 'Tommy Guerrero',
       image: 'about/music/tommyguerrero.webp',
       description: 'Rock and Trip Hop latin mix.',
-      expanded: 'Proffesional skateboarder and multi-instrumentalist. I recommend the songs: "Salve" and "It gets heavy"; And the album " Road to Knowhere".',
+      expanded: 'Skateboarder and multi-instrumentalist. I recommend the songs: "Salve" and "It gets heavy"; And the album " Road to Knowhere".',
     },
     {
       title: 'Los Espiritus',
       image: 'about/music/losespiritus.webp',
       description: 'Argentinian Rock, Blues and Folk.',
-      expanded: 'Band that combines Rock and Blues with folk. I recommend the songs: "En Este Mundo No Hay Lugar" and "Vamos a la Luna"; And the album "Aguardiente".',
+      expanded: 'Band that combines Rock and Blues with folk. I recommend the songs: "La motaña" and "Vamos a la Luna"; And the album "Aguardiente".',
     },
     {
       title: 'MF DOOM',

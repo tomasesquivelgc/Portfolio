@@ -18,7 +18,7 @@ const ModalInfo = ({ info }) => {
         <h3 className="text-4xl pb-2">{info.title}</h3>
         <p className="text-xl">{info.text}</p>
       </div>
-      <div className="flex flex-col md:flex-row gap-4 justify-around w-full h-full md:max-h-96 py-8">
+      <div className="flex flex-col md:flex-row gap-4 justify-around w-full h-full md:max-h-96 my-20 md:my-0 md:py-8">
         {info.data.map((data, index) => (
           <motion.div
             className={`md:w-1/3 w-full border border-night p-1 hover:border-argBlue hover:cursor-pointer relative bg-prussiaBlue h-2/5 md:h-auto flex md:flex-col ${
