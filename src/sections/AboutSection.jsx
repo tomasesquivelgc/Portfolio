@@ -10,7 +10,7 @@ function AboutSection() {
           Quick to adapt to new environments and challenges, managing pressure and deadlines.
           <br />
           <br />
-          Experienced in teamwork and project management, constantly aiming to deliver 
+          Experienced in teamwork and project management, constantly aiming to deliver
           high-quality results.
           <br />
           <br />
@@ -20,7 +20,7 @@ function AboutSection() {
           <br />
         </p>
         <div className="py-1 border-t-2 mt-3">
-          <p className='py-1'>
+          <p className="py-1">
             If you must know one thing about me is that I love putting my skills to the test
             and pushing my boundries to the limit. But if you want to get to know me better,
             you can check the list below.
@@ -29,7 +29,7 @@ function AboutSection() {
         </div>
 
       </div>
-      <img src="src\assets\cropped_face.jpg" alt="thats me!" className="w-1/2 h-auto object-cover" />
+      <img src="src\assets\cropped_face.jpg" alt="thats me!" className="w-1/2 h-auto object-cover" loading="lazy" />
     </section>
   );
 }

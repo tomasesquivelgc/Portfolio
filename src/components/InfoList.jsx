@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { IoIosArrowDown } from 'react-icons/io';
 import Modal from './Modal';
 import {
   skills, languages, games, music, books, blog,
 } from '../data/aboutMe';
-import { IoIosArrowDown } from "react-icons/io";
 
 function InfoList() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -61,12 +61,12 @@ function InfoList() {
             onClick={toggleHobbies}
           >
             Hobbies
-          <IoIosArrowDown className={`inline transition-all ${hobbiesExpanded ? "rotate-180" : ""}`} />
+            <IoIosArrowDown className={`inline transition-all ${hobbiesExpanded ? 'rotate-180' : ''}`} />
           </motion.button>
           <AnimatePresence>
             {hobbiesExpanded && (
               <motion.ul
-                className='absolute left-0 top-100 flex flex-col gap-1 py-1'
+                className="absolute left-0 top-100 flex flex-col gap-1 py-1"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, x: -20 }}
@@ -79,8 +79,11 @@ function InfoList() {
                   transition={{ duration: 0.3 }}
                 >
                   <motion.button
-                  whileHover={{scale: 1.1}}
-                  type="button" className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md" onClick={() => openModal(games)}>
+                    whileHover={{ scale: 1.1 }}
+                    type="button"
+                    className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
+                    onClick={() => openModal(games)}
+                  >
                     Gaming
                   </motion.button>
                 </motion.li>
@@ -91,8 +94,11 @@ function InfoList() {
                   transition={{ duration: 0.3, delay: 0.1 }}
                 >
                   <motion.button
-                  whileHover={{scale: 1.1}}
-                  className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md" type="button" onClick={() => openModal(music)}>
+                    whileHover={{ scale: 1.1 }}
+                    className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
+                    type="button"
+                    onClick={() => openModal(music)}
+                  >
                     Music
                   </motion.button>
                 </motion.li>
@@ -103,8 +109,11 @@ function InfoList() {
                   transition={{ duration: 0.3, delay: 0.2 }}
                 >
                   <motion.button
-                  whileHover={{scale: 1.1}}
-                  className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md" type="button" onClick={() => openModal(books)}>
+                    whileHover={{ scale: 1.1 }}
+                    className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
+                    type="button"
+                    onClick={() => openModal(books)}
+                  >
                     Reading
                   </motion.button>
                 </motion.li>

@@ -53,7 +53,7 @@ const MobileMenu = ({ navBgColor }) => {
       <AnimatePresence>
         {isOpen && <MobileMenuContent handleClose={handleBackdropClose} />}
       </AnimatePresence>
-      
+
     </div>
   );
 };
