@@ -54,39 +54,39 @@ function HeroSection() {
             <FaLinkedin />
           </motion.a>
         </motion.div>
-        
+
         <motion.div
-        initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2 }}
-        ><motion.a
-          
-          whileHover={{ scale: 1.5, color: '#FCF7FF' }}
-          href="https://github.com/tomasesquivelgc"
-          target="_blank"
-          rel="noreferrer"
-          className="text-argBlue"
         >
-          <FaGithub />
-        </motion.a></motion.div>
-        
+          <motion.a
+            whileHover={{ scale: 1.5, color: '#FCF7FF' }}
+            href="https://github.com/tomasesquivelgc"
+            target="_blank"
+            rel="noreferrer"
+            className="text-argBlue"
+          >
+            <FaGithub />
+          </motion.a>
+        </motion.div>
+
         <motion.div
-        initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2.5 }}
         >
-<motion.a
-          
-          whileHover={{ scale: 1.5, color: '#FCF7FF' }}
-          href="https://medium.com/@tomasesquivel"
-          target="_blank"
-          rel="noreferrer"
-          className="text-argBlue"
-        >
-          <FaMedium />
-        </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.5, color: '#FCF7FF' }}
+            href="https://medium.com/@tomasesquivel"
+            target="_blank"
+            rel="noreferrer"
+            className="text-argBlue"
+          >
+            <FaMedium />
+          </motion.a>
         </motion.div>
-        
+
       </div>
     </section>
   );
