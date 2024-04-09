@@ -10,7 +10,7 @@ const featured = [
   {
     title: 'Game Sales Hunter',
     technologies: ['Javascript', 'React', 'Redux', 'API'],
-    image: 'src/assets/projects/bookcar.webp',
+    image: 'src/assets/projects/gamesales.webp',
     description: 'Mobile App using CheapShark Api to find the best deals on games. The user can search for a specific game or browse through the deals list. By clicking, the user can also see the games details and a link to the official steam page',
     link: 'https://monumental-raindrop-ef8680.netlify.app',
     codeLink: 'https://github.com/tomasesquivelgc/Games-Sales-Hunter',

@@ -14,7 +14,6 @@ const DesktopMenu = ({ navBgColor }) => (
         <motion.li initial={{ opacity: 0.8 }} whileHover={{ scale: 1.3, color: '#4CA8EA', opacity: 1 }}><a href="#projects">Projects</a></motion.li>
         <motion.li initial={{ opacity: 0.8 }} whileHover={{ scale: 1.3, color: '#4CA8EA', opacity: 1 }}><a href="#skills">Skills</a></motion.li>
         <motion.li initial={{ opacity: 0.8 }} whileHover={{ scale: 1.3, color: '#4CA8EA', opacity: 1 }}><a href="#about">About</a></motion.li>
-        <motion.li initial={{ opacity: 0.8 }} whileHover={{ scale: 1.3, color: '#4CA8EA', opacity: 1 }}><a href="#recommendations">Recommendations</a></motion.li>
         <motion.li initial={{ opacity: 0.8 }} whileHover={{ scale: 1.3, color: '#4CA8EA', opacity: 1 }}><a href="#contact">Contact</a></motion.li>
       </ul>
     </div>

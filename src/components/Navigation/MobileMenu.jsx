@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import propTypes from 'prop-types';
 import MobileMenuContent from './MobileMenuContent';
 
@@ -50,7 +50,10 @@ const MobileMenu = ({ navBgColor }) => {
           )}
         </motion.div>
       </button>
-      {isOpen && <MobileMenuContent handleClose={handleBackdropClose} />}
+      <AnimatePresence>
+        {isOpen && <MobileMenuContent handleClose={handleBackdropClose} />}
+      </AnimatePresence>
+
     </div>
   );
 };
