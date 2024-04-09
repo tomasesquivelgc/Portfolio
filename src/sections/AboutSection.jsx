@@ -29,7 +29,7 @@ function AboutSection() {
         </div>
 
       </div>
-      <img src="src\assets\cropped_face.jpg" alt="thats me!" className="w-1/2 h-auto object-cover" loading="lazy" />
+      <img src="cropped_face.jpg" alt="thats me!" className="w-1/2 h-auto object-cover" loading="lazy" />
     </section>
   );
 }
