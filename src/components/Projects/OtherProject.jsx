@@ -15,12 +15,12 @@ const OtherProject = ({ project }) => {
 
   return (
     <motion.div
-    ref={ref}
-    style={{
-      transform: isInView ? "none" : "translateY(200px)",
-      opacity: isInView ? 1 : 0,
-      transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1)"
-    }}
+      ref={ref}
+      style={{
+        transform: isInView ? 'none' : 'translateY(200px)',
+        opacity: isInView ? 1 : 0,
+        transition: 'all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1)',
+      }}
       whileHover={{ translateY: -10 }}
       className="w-full text-left bg-prussiaBlue justify-self-center p-4 h-full flex flex-col justify-between"
     >

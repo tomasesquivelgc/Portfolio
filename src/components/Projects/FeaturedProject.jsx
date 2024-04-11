@@ -1,19 +1,18 @@
 import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { useRef } from 'react';
-import {useInView} from 'framer-motion';
 
-const FeaturedProject=({ project, alignRight })=> {
+const FeaturedProject = ({ project, alignRight }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
     <div
       ref={ref}
       style={{
-        transform: isInView ? "none" : `translateX(${alignRight ? '200px' : '-200px'})`,
+        transform: isInView ? 'none' : `translateX(${alignRight ? '200px' : '-200px'})`,
         opacity: isInView ? 1 : 0,
-        transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1)"
+        transition: 'all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1)',
       }}
       key={project.title}
       className={`w-full md:w-full relative  min-h-80 md:min-h-fit flex md:my-0 lg:my-8 ${
@@ -78,7 +77,7 @@ const FeaturedProject=({ project, alignRight })=> {
 
     </div>
   );
-}
+};
 
 FeaturedProject.defaultProps = {
   alignRight: false,
