@@ -24,7 +24,7 @@ const FeaturedProject=({ project, alignRight })=> {
       <div className={`h-full md:h-auto md:w-7/12 overflow-hidden md:overflow-visible bg-prussiaBlue flex justify-center absolute ${alignRight ? 'left-0' : 'right-0'}`}>
         <motion.img
           whileHover={{ scale: 1.03, opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.3 }}
           className="h-full min-w-max md:min-w-0 md:h-auto opacity-15 md:opacity-70"
           src={project.image}
           alt={project.title}
