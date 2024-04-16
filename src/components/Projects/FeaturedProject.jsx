@@ -12,7 +12,7 @@ const FeaturedProject = ({ project, alignRight }) => {
       style={{
         transform: isInView ? 'none' : `translateX(${alignRight ? '200px' : '-200px'})`,
         opacity: isInView ? 1 : 0,
-        transition: 'all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1)',
+        transition: 'all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s',
       }}
       key={project.title}
       className={`w-full md:w-full relative  min-h-80 md:min-h-fit flex md:my-0 lg:my-8 ${
