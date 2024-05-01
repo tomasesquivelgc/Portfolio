@@ -1,5 +1,12 @@
 const moreProjects = [
   {
+    title: 'Golden Ratio Calculator',
+    technologies: ['Javascript', 'React'],
+    description: 'Calculate the golden ratio of a number and use it as reference for your font sizes.',
+    link: 'https://clever-beignet-177e33.netlify.app',
+    codeLink: 'https://github.com/tomasesquivelgc/Golden-ratio-fonts',
+  },
+  {
     title: 'Space Travel',
     technologies: ['Javascript', 'React', 'Redux'],
     description: 'Book a rocket or join a mission. With the SpaceX API, you can see the next launches and the rockets available for booking.',
