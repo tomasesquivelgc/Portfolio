@@ -10,7 +10,7 @@ const moreProjects = [
     title: 'Super Transactions',
     technologies: ['Ruby', 'Rails', 'PostgreSQL'],
     description: 'Budget app to keep track of your transactions. Create categories and add transactions to them.',
-    link: null,
+    link: 'https://super-transactions.onrender.com',
     codeLink: 'https://github.com/tomasesquivelgc/Super-Transactions',
   },
   {
