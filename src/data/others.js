@@ -1,5 +1,12 @@
 const moreProjects = [
   {
+    title: 'Advanced Note Taker',
+    technologies: ['TypeScript', 'React', 'Material UI'],
+    description: 'Keep yout thoughts and ideas in one place. Use tags to organize your notes and markdown to format them.',
+    link: 'taupe-cupcake-dc5afd.netlify.app',
+    codeLink: 'https://github.com/tomasesquivelgc/Note-Taking-App',
+  },
+  {
     title: 'Golden Ratio Calculator',
     technologies: ['Javascript', 'React'],
     description: 'Calculate the golden ratio of a number and use it as reference for your font sizes.',
