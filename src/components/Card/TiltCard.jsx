@@ -4,7 +4,7 @@ import {
 } from 'framer-motion';
 
 const Card = ({
-  technologies, isInView,
+  technologies, isInView, fromRight = false,
 }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -39,8 +39,8 @@ const Card = ({
         rotateY: springRotateY,
         perspective: 1000,
       }}
-      initial={{ x: -200, opacity: 0 }}
-      animate={{ x: isInView ? 0 : -200, opacity: isInView ? 1 : 0 }}
+      initial={{ x: fromRight ? 200 : -200, opacity: 0 }}
+      animate={{ x: isInView ? 0 : fromRight ? 200 : -200, opacity: isInView ? 1 : 0 }}
       transition={{
         duration: 0.9,
         ease: [0.17, 0.55, 0.55, 1],
@@ -80,4 +80,5 @@ Card.propTypes = {
       icon: propTypes.string.isRequired,
     }),
   ).isRequired,
+  fromRight: propTypes.bool,
 };

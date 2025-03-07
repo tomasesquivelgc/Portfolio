@@ -14,13 +14,12 @@ const TechList = () => {
       <Card
         isInView={isInView1}
         technologies={stack.frontend}
-        delay={0}
       />
       <h2 ref={ref2} className="text-2xl font-chivo text-magnolia mb-2">Backend</h2>
       <Card
         isInView={isInView2}
         technologies={stack.backend}
-        delay={0}
+        fromRight
       />
     </div>
   );
