@@ -1,12 +1,20 @@
 const stack = {
   frontend: [
     {
+      title: "TypeScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+    },
+    {
       title: 'JavaScript',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
     },
     {
       title: 'React',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+    },
+    {
+      title: 'Redux',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg',
     },
     {
       title: 'HTML',
@@ -21,13 +29,10 @@ const stack = {
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
     },
     {
-      title: 'Redux',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg',
-    },
-    {
       title: "Flutter",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg",
     },
+
   ],
   backend: [
     {
@@ -51,9 +56,18 @@ const stack = {
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
     },
     {
-      title: 'GitHub',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+      title: "Spring Boot",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
     },
+    {
+      title: "MongoDB",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+    },
+    {
+      title: "Postman",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+    }
+
   ]
 };
 
