@@ -4,7 +4,7 @@ import {
 } from 'framer-motion';
 
 const Card = ({
-  technologies, isInView, delay = 0,
+  technologies, isInView,
 }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -43,7 +43,6 @@ const Card = ({
       animate={{ x: isInView ? 0 : -200, opacity: isInView ? 1 : 0 }}
       transition={{
         duration: 0.9,
-        delay,
         ease: [0.17, 0.55, 0.55, 1],
       }}
       onMouseMove={handleMouseMove}
@@ -81,5 +80,4 @@ Card.propTypes = {
       icon: propTypes.string.isRequired,
     }),
   ).isRequired,
-  delay: propTypes.number.isRequired,
 };
