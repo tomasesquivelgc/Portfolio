@@ -1,29 +1,45 @@
 import propTypes from 'prop-types';
 
-const Card = ({
-  title, icon, isInView, index,
-}) => (
+const Card = ({ title, technologies, isInView, delay = 0 }) => (
   <div
     style={{
       transform: isInView ? 'none' : 'translateX(-200px)',
       opacity: isInView ? 1 : 0,
-      transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${index * 0.1 + 0.3}s`,
+      transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${delay}s`,
     }}
-    className="flex flex-col items-center w-full h-full"
+    className="p-6 rounded-xl bg-gradient-to-br from-richBlack via-argBlue to-magnolia"
   >
-    <div className="relative w-14 h-14 md:w-20 md:h-20 rounded-lg justify-center shadow-lg overflow-hidden p-2 flex bg-gradient-to-br from-richBlack via-argBlue to-magnolia">
-      <img className="w-full h-full object-cover m-auto" src={icon} alt={title} loading="lazy" />
+    <h2 className="text-2xl font-chivo text-magnolia mb-6">{title}</h2>
+    <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
+      {technologies.map((tech) => (
+        <div key={tech.title} className="flex flex-col items-center">
+          <div className="w-12 h-12 md:w-16 md:h-16 rounded-lg flex items-center justify-center p-2 bg-richBlack/30">
+            <img 
+              className="w-full h-full object-contain" 
+              src={tech.icon} 
+              alt={tech.title} 
+              loading="lazy" 
+            />
+          </div>
+          <span className="text-sm md:text-base text-magnolia/80 mt-2 text-center">
+            {tech.title}
+          </span>
+        </div>
+      ))}
     </div>
-    <h3 className="text-center text-lg md:text-xl font-chivo text-magnolia opacity-80 py-3">{title}</h3>
   </div>
-
 );
 
 export default Card;
 
 Card.propTypes = {
   isInView: propTypes.bool.isRequired,
-  index: propTypes.number.isRequired,
   title: propTypes.string.isRequired,
-  icon: propTypes.string.isRequired,
+  technologies: propTypes.arrayOf(
+    propTypes.shape({
+      title: propTypes.string.isRequired,
+      icon: propTypes.string.isRequired,
+    })
+  ).isRequired,
+  delay: propTypes.number,
 };
