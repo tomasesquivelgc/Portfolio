@@ -1,5 +1,5 @@
-import InfoList from '../components/InfoList';
 import { motion } from 'framer-motion';
+import InfoList from '../components/InfoList';
 
 function AboutSection() {
   return (
@@ -24,7 +24,7 @@ function AboutSection() {
           target="_blank"
           rel="noopener noreferrer"
           className="text-center inline-block w-full bg-argBlue border tracking-wider text-xl p-1 md:text-base rounded-md text-night font-medium"
-          whileHover={{ scale: 1.06}}
+          whileHover={{ scale: 1.06 }}
         >
           Curriculum Vitae
         </motion.a>
