@@ -1,4 +1,5 @@
 import InfoList from '../components/InfoList';
+import { motion } from 'framer-motion';
 
 function AboutSection() {
   return (
@@ -17,8 +18,16 @@ function AboutSection() {
           Dreaming of helping others through technology and innovation since young,
           always looking for new ways to improve and learn new things.
           <br />
-          <br />
         </p>
+        <motion.a
+          href="https://docs.google.com/document/d/e/2PACX-1vRgXEd3utL9Uql57taDOidPbsYLvzCnwtv_B22REQOEhlTgC6zVEXrgss-M-YwjkjGsK22qdDXvzRmh/pub"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-center inline-block w-full bg-argBlue border tracking-wider text-xl p-1 md:text-base rounded-md text-night font-medium"
+          whileHover={{ scale: 1.06}}
+        >
+          Curriculum Vitae
+        </motion.a>
         <div className="py-1 border-t-2 mt-3">
           <p className="py-1">
             If you must know one thing about me is that I love putting my skills to the test
