@@ -1,7 +1,11 @@
 import propTypes from 'prop-types';
-import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
+import {
+  motion, useMotionValue, useTransform, useSpring,
+} from 'framer-motion';
 
-const Card = ({ title, technologies, isInView, delay = 0 }) => {
+const Card = ({
+  technologies, isInView, delay = 0,
+}) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -17,7 +21,7 @@ const Card = ({ title, technologies, isInView, delay = 0 }) => {
     const rect = event.currentTarget.getBoundingClientRect();
     const centerX = rect.x + rect.width / 2;
     const centerY = rect.y + rect.height / 2;
-    
+
     x.set(event.clientX - centerX);
     y.set(event.clientY - centerY);
   }
@@ -40,7 +44,7 @@ const Card = ({ title, technologies, isInView, delay = 0 }) => {
       transition={{
         duration: 0.9,
         delay,
-        ease: [0.17, 0.55, 0.55, 1]
+        ease: [0.17, 0.55, 0.55, 1],
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
@@ -50,11 +54,11 @@ const Card = ({ title, technologies, isInView, delay = 0 }) => {
         {technologies.map((tech) => (
           <div key={tech.title} className="flex flex-col items-center">
             <div className="w-12 h-12 md:w-24 md:h-24 rounded-lg flex items-center justify-center p-2 bg-richBlack/70">
-              <img 
-                className="w-full h-full object-contain" 
-                src={tech.icon} 
-                alt={tech.title} 
-                loading="lazy" 
+              <img
+                className="w-full h-full object-contain"
+                src={tech.icon}
+                alt={tech.title}
+                loading="lazy"
               />
             </div>
             <span className="text-sm md:text-base text-magnolia/80 mt-2 text-center">
@@ -71,12 +75,11 @@ export default Card;
 
 Card.propTypes = {
   isInView: propTypes.bool.isRequired,
-  title: propTypes.string.isRequired,
   technologies: propTypes.arrayOf(
     propTypes.shape({
       title: propTypes.string.isRequired,
       icon: propTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
-  delay: propTypes.number,
+  delay: propTypes.number.isRequired,
 };

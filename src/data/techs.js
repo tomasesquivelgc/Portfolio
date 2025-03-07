@@ -1,8 +1,8 @@
 const stack = {
   frontend: [
     {
-      title: "TypeScript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+      title: 'TypeScript',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
     },
     {
       title: 'JavaScript',
@@ -29,8 +29,8 @@ const stack = {
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
     },
     {
-      title: "Flutter",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg",
+      title: 'Flutter',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg',
     },
 
   ],
@@ -56,19 +56,19 @@ const stack = {
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
     },
     {
-      title: "Spring Boot",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
+      title: 'Spring Boot',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg',
     },
     {
-      title: "MongoDB",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+      title: 'MongoDB',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg',
     },
     {
-      title: "Postman",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
-    }
+      title: 'Postman',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg',
+    },
 
-  ]
+  ],
 };
 
 export default stack;
