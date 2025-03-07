@@ -1,10 +1,19 @@
 import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { useRef } from 'react';
 
-function FeaturedProject({ project, alignRight }) {
+const FeaturedProject = ({ project, alignRight }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <div
+      ref={ref}
+      style={{
+        transform: isInView ? 'none' : `translateX(${alignRight ? '200px' : '-200px'})`,
+        opacity: isInView ? 1 : 0,
+        transition: 'all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s',
+      }}
       key={project.title}
       className={`w-full md:w-full relative  min-h-80 md:min-h-fit flex md:my-0 lg:my-8 ${
         alignRight ? 'md:justify-end' : ''
@@ -14,7 +23,7 @@ function FeaturedProject({ project, alignRight }) {
       <div className={`h-full md:h-auto md:w-7/12 overflow-hidden md:overflow-visible bg-prussiaBlue flex justify-center absolute ${alignRight ? 'left-0' : 'right-0'}`}>
         <motion.img
           whileHover={{ scale: 1.03, opacity: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.3 }}
           className="h-full min-w-max md:min-w-0 md:h-auto opacity-15 md:opacity-70"
           src={project.image}
           alt={project.title}
@@ -68,7 +77,7 @@ function FeaturedProject({ project, alignRight }) {
 
     </div>
   );
-}
+};
 
 FeaturedProject.defaultProps = {
   alignRight: false,

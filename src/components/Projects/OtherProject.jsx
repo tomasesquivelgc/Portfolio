@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { useRef } from 'react';
 
 const OtherProject = ({ project }) => {
   const handleClick = () => {
@@ -9,9 +10,17 @@ const OtherProject = ({ project }) => {
     }
     return project.codeLink;
   };
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   return (
     <motion.div
+      ref={ref}
+      style={{
+        transform: isInView ? 'none' : 'translateY(200px)',
+        opacity: isInView ? 1 : 0,
+        transition: 'all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1)',
+      }}
       whileHover={{ translateY: -10 }}
       className="w-full text-left bg-prussiaBlue justify-self-center p-4 h-full flex flex-col justify-between"
     >
