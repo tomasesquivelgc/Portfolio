@@ -92,10 +92,10 @@ const games = {
 
     },
     {
-      title: 'League of Legends',
-      image: 'about/games/lol.webp',
-      description: 'MOBA, Competitive, Teamwork.',
-      expanded: '"Crews share the wealth." My highest rank was Diamond 2 and my favorite champion is Pyke.',
+      title: 'Your Only Move is HUSTLE',
+      image: 'about/games/YOMI.webp',
+      description: '2D Fighter, Turn Based Strategy, Action.',
+      expanded: '"CERTIFIED HUSTLER." Turn based fighting game with a very big and active modding community.',
     },
     {
       title: 'ULTRAKILL',
