@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 
 function ContactForm() {
   return (
-    <form action="https://formspree.io/f/xwkjrkqw" method="post" className="flex flex-col w-full md:w-1/2 py-4">
-      <label htmlFor="full-name" className="py-1">
+    <form action="https://formspree.io/f/xwkjrkqw" method="post" className="flex flex-col w-full md:w-1/2">
+      <label htmlFor="full-name" className="pb-1">
         Full name:
         <input className="w-full bg-magnolia text-night" id="full-name" type="text" name="name" placeholder="Full name" maxLength="30" required />
       </label>
