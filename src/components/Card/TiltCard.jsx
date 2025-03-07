@@ -4,10 +4,12 @@ import {
 } from 'framer-motion';
 
 const Card = ({
-  technologies, isInView, delay = 0,
+  technologies, isInView, fromRight = false,
 }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
+
+  const slidePosition = fromRight ? 200 : -200;
 
   const rotateX = useTransform(y, [-300, 300], [15, -15]);
   const rotateY = useTransform(x, [-300, 300], [-15, 15]);
@@ -39,11 +41,13 @@ const Card = ({
         rotateY: springRotateY,
         perspective: 1000,
       }}
-      initial={{ x: -200, opacity: 0 }}
-      animate={{ x: isInView ? 0 : -200, opacity: isInView ? 1 : 0 }}
+      initial={{ x: slidePosition, opacity: 0 }}
+      animate={{
+        x: isInView ? 0 : slidePosition,
+        opacity: isInView ? 1 : 0,
+      }}
       transition={{
         duration: 0.9,
-        delay,
         ease: [0.17, 0.55, 0.55, 1],
       }}
       onMouseMove={handleMouseMove}
@@ -81,5 +85,5 @@ Card.propTypes = {
       icon: propTypes.string.isRequired,
     }),
   ).isRequired,
-  delay: propTypes.number.isRequired,
+  fromRight: propTypes.bool.isRequired,
 };
