@@ -42,7 +42,7 @@ const FeaturedProject = ({ project, alignRight }) => {
           </a>
         </h4>
 
-        <p className="py-1 md:px-2 md:bg-prussiaBlue opacity-90">{project.description}</p>
+        <p className="py-2 md:px-3 md:py-3 md:bg-prussiaBlue opacity-90">{project.description}</p>
 
         <ul className={`py-2 md:px-0 flex gap-4 w-full flex-wrap ${alignRight ? 'md:justify-end' : 'md:justify-start'}`}>
           {project.technologies.map((tech) => (
