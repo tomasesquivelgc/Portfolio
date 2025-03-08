@@ -7,17 +7,27 @@ function AboutSection() {
       <div className="w-full lg:w-1/2">
         <h2 className="font-medium text-5xl py-1">About me</h2>
         <p className="py-3 mb-3">
-          I'm a creative and resourceful person, oriented toward problem-solving 
-          and continuous learning. Together with my quick adaptability, 
+          I'm a <span className="font-bold text-argBlue">creative</span> and <span className="text-argBlue font-bold">resourceful</span> individual, 
+          oriented towards <span className="font-bold text-argBlue">problem-solving </span> 
+          and <span className="font-bold text-argBlue">
+          continuous learning</span>. 
+          Together with my <span className="font-bold text-argBlue">
+          quick adaptability, </span>
           I aim to turn imagination into reality.
           <br />
           <br />
-          Experienced in teamwork, I thrive in a communicative environment where I can 
-          learn from different people and share my own ideas, all with the purpose of creating 
+          Experienced in <span className="font-bold text-argBlue">
+          teamwork,</span> I thrive in a <span className="font-bold text-argBlue">
+          communicative environment</span> where I can 
+          learn from different people and share my own <span className="font-bold text-argBlue">
+          ideas</span>, all with the purpose of creating 
           something we can be proud of.
           <br />
           <br />
-          A tinkerer by nature, I dream of helping people through technology and innovation—always 
+          A <span className="font-bold text-argBlue">
+          tinkerer</span> by nature, I dream of helping people through <span className="font-bold text-argBlue">
+          technology</span> and <span className="font-bold text-argBlue">
+          innovation</span>—always 
           looking for new ways to improve.
           <br />
         </p>
@@ -32,8 +42,9 @@ function AboutSection() {
         </motion.a>
         <div className="py-1  mt-4 flex gap-4">
           <p className="py-1 w-1/2">
-            If you must know one thing about me is that I love challenging myself to 
-            solve any problem. But if you want to get to know me better,
+            If you must know one thing about me is that I love <span className="font-bold text-argBlue">
+            challenging</span> myself to <span className="font-bold text-argBlue">
+            solve any problem</span>. But if you want to get to know me better,
             you can check this list.
           </p>
           <div  className="w-1/2">
