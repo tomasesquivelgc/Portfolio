@@ -9,7 +9,7 @@ const TechList = () => {
   const ref2 = useRef(null);
   const isInView2 = useInView(ref2, { once: true });
   return (
-    <div className="space-y-8 p-4">
+    <div className="space-y-8 p-4 justify-center items-center flex flex-col">
       <h2 ref={ref1} className="text-2xl font-chivo text-magnolia mb-2">FrontEnd</h2>
       <Card
         isInView={isInView1}
