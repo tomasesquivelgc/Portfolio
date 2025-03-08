@@ -5,15 +5,15 @@ export default {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    colors: {
-      night: '#0A0B0B',
-      richBlack: '#0A1623',
-      argBlue: '#4CA8EA',
-      magnolia: '#FCF7FF',
-      modal: '#000000e1',
-      prussiaBlue: '#122840',
-    },
     extend: {
+      colors: {
+        night: '#0A0B0B',
+        richBlack: '#0A1623',
+        argBlue: '#4CA8EA',
+        magnolia: '#FCF7FF',
+        modal: '#000000e1',
+        prussiaBlue: '#122840',
+      },
       fontFamily: {
         monts: ['Montserrat', 'sans-serif'],
         gentium: ['Gentium Book Plus', 'serif'],
