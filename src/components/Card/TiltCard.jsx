@@ -52,7 +52,7 @@ const Card = ({
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="md:w-3/4 p-4 rounded-2xl bg-gradient-to-br from-prussiaBlue via-argBlue to-prussiaBlue transform-gpu shadow-inner-custom"
+      className="md:w-3/4 p-4 rounded-2xl bg-gradient-to-r from-prussiaBlue via-argBlue to-prussiaBlue transform-gpu shadow-inner-custom"
     >
       <div className="ring ring-night rounded-2xl p-4 shadow-inner-custom">
         <div className="grid grid-cols-4 gap-8 w-fit mx-auto">
