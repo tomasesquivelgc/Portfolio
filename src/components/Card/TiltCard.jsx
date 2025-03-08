@@ -52,9 +52,9 @@ const Card = ({
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="w-3/4 p-4 rounded-xl bg-gradient-to-br from-prussiaBlue via-argBlue to-prussiaBlue transform-gpu"
+      className="md:w-3/4 p-4 rounded-xl bg-gradient-to-br from-prussiaBlue via-argBlue to-prussiaBlue transform-gpu shadow-inner-custom"
     >
-      <div className="border-2 border-night rounded-lg p-4">
+      <div className="ring ring-night rounded-2xl p-4 shadow-inner-custom">
         <div className="grid grid-cols-4 gap-8 w-fit mx-auto">
           {technologies.map((tech) => (
             <div key={tech.title} className="flex flex-col items-center">

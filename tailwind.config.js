@@ -19,6 +19,9 @@ export default {
         gentium: ['Gentium Book Plus', 'serif'],
         chivo: ['Chivo', 'sans-serif'],
       },
+      boxShadow: {
+        'inner-custom': 'inset 0 2px 4px 3px rgb(2 9 27 / 0.5)',
+      },
     },
   },
   plugins: [],
