@@ -23,7 +23,7 @@ function AboutSection() {
           href="https://docs.google.com/document/d/e/2PACX-1vRgXEd3utL9Uql57taDOidPbsYLvzCnwtv_B22REQOEhlTgC6zVEXrgss-M-YwjkjGsK22qdDXvzRmh/pub"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-center inline-block w-full bg-argBlue tracking-wider text-xl p-1 md:text-base rounded-md text-night font-medium"
+          className="text-center inline-block w-full bg-gradient-to-r from-argBlue to-argBlue/70 tracking-wider text-xl p-1 md:text-base rounded-md text-black font-semibold"
           whileHover={{ scale: 1.06 }}
         >
           Curriculum Vitae
