@@ -7,16 +7,18 @@ function AboutSection() {
       <div className="w-full lg:w-1/2">
         <h2 className="font-medium text-5xl py-1">About me</h2>
         <p className="py-3 mb-3">
-          Creative and resourceful. Oriented towards problem-solving and continuous learning.
-          Quick to adapt to new environments and challenges, managing pressure and deadlines.
+          I'm a creative and resourceful person, oriented toward problem-solving 
+          and continuous learning. Together with my quick adaptability, 
+          I aim to turn imagination into reality.
           <br />
           <br />
-          Experienced in teamwork and project management, constantly aiming to deliver
-          high-quality results.
+          Experienced in teamwork, I thrive in a communicative environment where I can 
+          learn from different people and share my own ideas, all with the purpose of creating 
+          something we can be proud of.
           <br />
           <br />
-          Dreaming of helping others through technology and innovation since young,
-          always looking for new ways to improve and learn new things.
+          A tinkerer by nature, I dream of helping people through technology and innovation—always 
+          looking for new ways to improve.
           <br />
         </p>
         <motion.a
