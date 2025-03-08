@@ -22,7 +22,7 @@ function InfoList() {
 
   return (
     <div className=" w-full min-w-min py-1">
-      <ul className="grid grid-cols-2 gap-4 text-night font-medium">
+      <ul className="grid grid-cols-1 gap-4 text-night font-medium">
         <li className="w-full h-full">
           <motion.button
             className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
