@@ -22,10 +22,10 @@ function InfoList() {
 
   return (
     <div className=" w-full min-w-min py-1">
-      <ul className="grid grid-cols-2 gap-4 text-night font-medium">
+      <ul className="grid grid-cols-1 gap-4 text-black font-semibold">
         <li className="w-full h-full">
           <motion.button
-            className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
+            className="w-full h-full bg-gradient-to-r from-argBlue to-argBlue/70  tracking-wider text-xl  p-1 md:text-base rounded-md"
             type="button"
             onClick={() => openModal(skills)}
             whileHover={{ scale: 1.1 }}
@@ -36,7 +36,7 @@ function InfoList() {
         <li className="w-full h-full">
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
+            className="w-full h-full bg-gradient-to-r from-argBlue to-argBlue/70  tracking-wider text-xl  p-1 md:text-base rounded-md"
             type="button"
             onClick={() => openModal(blog)}
           >
@@ -46,7 +46,7 @@ function InfoList() {
         <li className="w-full h-full">
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
+            className="w-full h-full bg-gradient-to-r from-argBlue to-argBlue/70  tracking-wider text-xl  p-1 md:text-base rounded-md"
             type="button"
             onClick={() => openModal(languages)}
           >
@@ -56,7 +56,7 @@ function InfoList() {
         <li className="w-full h-full relative">
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
+            className="w-full h-full bg-gradient-to-r from-argBlue to-argBlue/70  tracking-wider text-xl  p-1 md:text-base rounded-md"
             type="button"
             onClick={toggleHobbies}
           >
@@ -73,7 +73,7 @@ function InfoList() {
                 transition={{ duration: 0.3 }}
               >
                 <motion.li
-                  className="border"
+                  className=""
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
@@ -81,21 +81,21 @@ function InfoList() {
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     type="button"
-                    className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
+                    className="w-full h-full bg-gradient-to-r from-argBlue to-argBlue/70  tracking-wider text-xl  p-1 md:text-base rounded-md"
                     onClick={() => openModal(games)}
                   >
                     Gaming
                   </motion.button>
                 </motion.li>
                 <motion.li
-                  className="border-b"
+                  className=""
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.1 }}
                 >
                   <motion.button
                     whileHover={{ scale: 1.1 }}
-                    className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
+                    className="w-full h-full bg-gradient-to-r from-argBlue to-argBlue/70  tracking-wider text-xl  p-1 md:text-base rounded-md"
                     type="button"
                     onClick={() => openModal(music)}
                   >
@@ -103,14 +103,14 @@ function InfoList() {
                   </motion.button>
                 </motion.li>
                 <motion.li
-                  className="border-b"
+                  className=""
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.2 }}
                 >
                   <motion.button
                     whileHover={{ scale: 1.1 }}
-                    className="w-full h-full bg-argBlue border tracking-wider text-xl  p-1 md:text-base rounded-md"
+                    className="w-full h-full bg-gradient-to-r from-argBlue to-argBlue/70 tracking-wider text-xl  p-1 md:text-base rounded-md"
                     type="button"
                     onClick={() => openModal(books)}
                   >
