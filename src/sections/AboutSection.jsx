@@ -30,9 +30,9 @@ function AboutSection() {
         </motion.a>
         <div className="py-1  mt-4 flex gap-4">
           <p className="py-1 w-1/2">
-            If you must know one thing about me is that I love putting my skills to the test
-            and pushing my boundries to the limit. But if you want to get to know me better,
-            you can check the list below.
+            If you must know one thing about me is that I love challenging myself to 
+            solve any problem. But if you want to get to know me better,
+            you can check this list.
           </p>
           <div  className="w-1/2">
             <InfoList />
