@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 function ContactForm() {
   return (
-    <form action="https://formspree.io/f/xwkjrkqw" method="post" className="flex flex-col w-full md:w-1/2 bg-prussiaBlue p-8 rounded-xl gap-2">
+    <form action="https://formspree.io/f/xwkjrkqw" method="post" className="flex flex-col w-full bg-prussiaBlue p-8 rounded-xl gap-2">
 
       <input
         className="w-full bg-magnolia text-black p-2 rounded-2xl focus:outline-none focus:ring-2 focus:ring-argBlue"

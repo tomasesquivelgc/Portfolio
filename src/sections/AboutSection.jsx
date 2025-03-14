@@ -1,10 +1,20 @@
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 import InfoList from '../components/InfoList';
 
 function AboutSection() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true }); // Trigger animation only once
+
   return (
     <section id="about" className="bg-richBlack min-h-screen gap-4 px-10 py-20 md:px-16 lg:px-32 flex flex-col md:flex-row-reverse">
-      <div className="w-full lg:w-1/2">
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: -50 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }} // Animate based on inView
+        transition={{ duration: 0.5, delay: 0.2 }} // Added delay
+        className="w-full lg:w-1/2"
+      >
         <h2 className="font-medium text-5xl py-1">About me</h2>
         <p className="py-3 mb-3">
           I&apos;m a
@@ -105,9 +115,16 @@ function AboutSection() {
             <InfoList />
           </div>
         </div>
-
-      </div>
-      <img src="cropped_face.webp" alt="thats me!" className="w-1/2 h-auto object-cover p-1" loading="lazy" />
+      </motion.div>
+      <motion.img
+        src="cropped_face.webp"
+        alt="thats me!"
+        className="w-1/2 h-auto object-cover p-4"
+        loading="lazy"
+        initial={{ opacity: 0, y: 50 }} // Start off-screen and transparent
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} // Animate based on inView
+        transition={{ duration: 0.5, delay: 0.2 }} // Same delay as the text
+      />
     </section>
   );
 }
