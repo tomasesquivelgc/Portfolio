@@ -1,5 +1,11 @@
 const featured = [
   {
+    title: 'Sity!',
+    technologies: ['Flutter', 'React', 'Spring Boot', 'PostgreSQL'],
+    image: 'projects/Sity_mobile_mockup.webp',
+    description: 'Sity! is an e-comerce app that allows users to find the best deals in products, events and services within their city. Built in collaboration with the Dreamerz team using Flutter for the mobile app, React for the web admin panel, and Spring Boot with PostgreSQL for the backend API and database.',
+  },
+  {
     title: 'Book a Car',
     technologies: ['Ruby', 'Rails', 'PostgreSQL', 'React', 'Redux'],
     image: 'projects/bookcar.webp',
