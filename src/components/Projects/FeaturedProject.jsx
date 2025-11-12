@@ -54,7 +54,7 @@ const FeaturedProject = ({ project, alignRight }) => {
       </div>
 
       <div
-        className={`${alignRight ? 'md:text-right' : 'md:text-left'} w-full md:w-1/2 p-4 md:p-0 z-10 flex flex-col justify-center`}
+        className={`${alignRight ? 'md:text-right' : 'md:text-left'} w-full md:w-1/2 p-4 md:p-0 z-10 flex flex-col justify-start`}
       >
         <h4 className="text-3xl text-argBlue md:px-0 py-1 hover:text-magnolia">
           <a href={project.link} target="_blank" rel="noopener noreferrer">
