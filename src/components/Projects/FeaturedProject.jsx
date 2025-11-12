@@ -45,7 +45,7 @@ const FeaturedProject = ({ project, alignRight }) => {
           ref={imgRef}
           whileHover={{ scale: 1.03, opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="h-auto w-full md:h-auto md:w-auto opacity-15 md:opacity-70"
+          className="h-auto w-full md:h-auto md:w-auto opacity-15 md:opacity-90"
           src={project.image}
           alt={project.title}
           loading="lazy"
@@ -83,25 +83,30 @@ const FeaturedProject = ({ project, alignRight }) => {
             alignRight ? 'md:justify-end' : 'md:justify-start'
           }`}
         >
-          <motion.a
-            whileHover={{ scale: 1.5, color: '#FCF7FF' }}
-            href={project.codeLink}
-            target="_blank"
-            rel="noreferrer"
-            className="text-argBlue text-xl"
-          >
-            <FaGithub />
-          </motion.a>
+          {project.link && (
+            <motion.a
+              whileHover={{ scale: 1.5, color: '#FCF7FF' }}
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              className="text-argBlue text-xl"
+            >
+              <FaExternalLinkAlt />
+            </motion.a>
+          )}
 
-          <motion.a
-            whileHover={{ scale: 1.5, color: '#FCF7FF' }}
-            href={project.link}
-            target="_blank"
-            rel="noreferrer"
-            className="text-argBlue text-xl"
-          >
-            <FaExternalLinkAlt />
-          </motion.a>
+          {project.link && (
+            <motion.a
+              whileHover={{ scale: 1.5, color: '#FCF7FF' }}
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              className="text-argBlue text-xl"
+            >
+              <FaExternalLinkAlt />
+            </motion.a>
+          )}
+          
         </div>
       </div>
     </div>
