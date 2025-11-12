@@ -1,4 +1,11 @@
 const moreProjects = [
+    {
+    title: 'Game Sales Hunter',
+    technologies: ['Javascript', 'React', 'Redux', 'API'],
+    description: 'App that uses CheapShark Api to find the best deals on games. The user can search, browse and redirect to the steam store to buy the game.',
+    link: 'https://monumental-raindrop-ef8680.netlify.app',
+    codeLink: 'https://github.com/tomasesquivelgc/Games-Sales-Hunter',
+  },
   {
     title: 'Advanced Note Taker',
     technologies: ['TypeScript', 'React', 'Material UI'],
@@ -12,6 +19,13 @@ const moreProjects = [
     description: 'Calculate the golden ratio of a number and use it as reference for your font sizes.',
     link: 'https://clever-beignet-177e33.netlify.app',
     codeLink: 'https://github.com/tomasesquivelgc/Golden-ratio-fonts',
+  },
+  {
+    title: 'Sound of Anemoia',
+    technologies: ['Javascript', 'HTML', 'CSS3'],
+    description: 'Landing page for a fictional event built as a learning project. The page is fully responsive with a mobile-first approach.',
+    link: 'https://precious-dolphin-41f59b.netlify.app',
+    codeLink: 'https://github.com/tomasesquivelgc/module1-capstone',
   },
   {
     title: 'Space Travel',
@@ -35,32 +49,11 @@ const moreProjects = [
     codeLink: 'https://github.com/tomasesquivelgc/Recipe-app',
   },
   {
-    title: 'Nitro Shows',
-    technologies: ['Javascript', 'HTML5', 'CSS3', 'API'],
-    description: 'Check out a list of shows from TVMaze API. Click on the different cards to see more information, comments and likes.',
-    link: 'https://hafiz1379.github.io/JS-capstone-project/dist/',
-    codeLink: 'https://github.com/tomasesquivelgc/JS-capstone-project',
-  },
-  {
     title: 'Blog App',
     technologies: ['Ruby', 'Rails', 'PostgreSQL'],
     description: 'Blog App where you can create articles, add comments and like them. Sign up to create your own articles.',
     link: null,
     codeLink: 'https://github.com/tomasesquivelgc/Blog-App',
-  },
-  {
-    title: 'Markdown Previewer',
-    technologies: ['Javascript', 'React'],
-    description: 'Simple markdown previewer built with React. Write markdown on the top container and visualize the result in real time',
-    link: 'https://incandescent-melba-b761fd.netlify.app',
-    codeLink: 'https://github.com/tomasesquivelgc/Markdown-Previewer',
-  },
-  {
-    title: 'Pomodoro Clock',
-    technologies: ['Javascript', 'React'],
-    description: '25+5 clock. Work, break, repeat. Increase or decrease the time for work or break. Start, pause, reset.',
-    link: 'https://fabulous-sherbet-db83da.netlify.app',
-    codeLink: 'https://github.com/tomasesquivelgc/Pomodoro-clock',
   },
   {
     title: 'My things Catalog',
