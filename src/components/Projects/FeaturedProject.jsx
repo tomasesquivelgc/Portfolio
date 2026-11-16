@@ -25,19 +25,20 @@ const FeaturedProject = ({ project, alignRight }) => {
   return (
     <div
       ref={ref}
+      key={project.title}
       style={{
         transform: isInView ? 'none' : `translateX(${alignRight ? '200px' : '-200px'})`,
         opacity: isInView ? 1 : 0,
         transition: 'all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s',
-        minHeight: imgHeight ? `${imgHeight}px` : 'auto', // 👈 dynamic min-height
       }}
-      key={project.title}
-      className={`w-full relative flex md:my-0 lg:my-8 ${
-        alignRight ? 'md:justify-end' : ''
-      }`}
+      className="w-full px-1 md:px-6 lg:px-8 md:my-2 lg:my-10"
+    >
+    <div
+      className="relative flex w-full"
+      style={{ minHeight: imgHeight ? `${imgHeight}px` : 'auto' }}
     >
       <div
-        className={`h-full md:h-auto md:w-7/12 overflow-hidden md:overflow-visible bg-prussiaBlue flex justify-center absolute ${
+        className={`h-full md:h-auto md:w-7/12 overflow-hidden rounded-xl bg-prussiaBlue flex justify-center absolute shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_20px_40px_rgba(0,0,0,0.4)] ${
           alignRight ? 'left-0' : 'right-0'
         }`}
       >
@@ -54,23 +55,21 @@ const FeaturedProject = ({ project, alignRight }) => {
       </div>
 
       <div
-        className={`${alignRight ? 'md:text-right' : 'md:text-left'} w-full md:w-1/2 p-4 md:p-0 z-10 flex flex-col justify-start`}
+        className={`text-left w-full md:w-5/12 p-4 md:p-0 z-10 flex flex-col justify-start ${
+          alignRight ? 'md:ml-auto md:pl-8' : 'md:pr-8'
+        }`}
       >
-        <h4 className="text-3xl text-argBlue md:px-0 py-1 hover:text-magnolia">
+        <h4 className="text-3xl text-left text-argBlue py-1 hover:text-magnolia">
           <a href={project.link} target="_blank" rel="noopener noreferrer">
             {project.title}
           </a>
         </h4>
 
-        <p className="py-2 md:px-3 md:py-3 md:bg-prussiaBlue/90">
+        <p className="px-3 py-2 leading-snug text-left border-l-[3px] border-l-[#3b82f6] bg-[rgba(15,23,42,0.75)] backdrop-blur rounded-r-md">
           {project.description}
         </p>
 
-        <ul
-          className={`py-2 md:px-0 flex gap-4 w-full flex-wrap ${
-            alignRight ? 'md:justify-end' : 'md:justify-start'
-          }`}
-        >
+        <ul className="py-2 flex gap-4 w-full flex-wrap justify-start">
           {project.technologies.map((tech) => (
             <li key={tech} className="font-chivo opacity-80 py-2">
               {tech}
@@ -78,11 +77,7 @@ const FeaturedProject = ({ project, alignRight }) => {
           ))}
         </ul>
 
-        <div
-          className={`flex gap-4 justify-end ${
-            alignRight ? 'md:justify-end' : 'md:justify-start'
-          }`}
-        >
+        <div className="flex gap-4 justify-start">
           {project.link && (
             <motion.a
               whileHover={{ scale: 1.5, color: '#FCF7FF' }}
@@ -109,6 +104,7 @@ const FeaturedProject = ({ project, alignRight }) => {
           
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -34,34 +34,6 @@ const moreProjects = [
     link: 'https://deploy-preview-36--guileless-halva-645039.netlify.app',
     codeLink: 'https://github.com/tomasesquivelgc/Space-Travelers-Hub',
   },
-  {
-    title: 'Super Transactions',
-    technologies: ['Ruby', 'Rails', 'PostgreSQL'],
-    description: 'Budget app to keep track of your transactions. Create categories and add transactions to them.',
-    link: 'https://super-transactions.onrender.com',
-    codeLink: 'https://github.com/tomasesquivelgc/Super-Transactions',
-  },
-  {
-    title: 'Recipe App',
-    technologies: ['Ruby', 'Rails', 'PostgreSQL'],
-    description: 'Look at public recipes or add your own by signing up. Keep track of your ingredients and the cost of your next meal.',
-    link: null,
-    codeLink: 'https://github.com/tomasesquivelgc/Recipe-app',
-  },
-  {
-    title: 'Blog App',
-    technologies: ['Ruby', 'Rails', 'PostgreSQL'],
-    description: 'Blog App where you can create articles, add comments and like them. Sign up to create your own articles.',
-    link: null,
-    codeLink: 'https://github.com/tomasesquivelgc/Blog-App',
-  },
-  {
-    title: 'My things Catalog',
-    technologies: ['Ruby', 'JSON', 'SQL'],
-    description: 'Ruby console app to store your games, books and albums and organize them by genre, author or label.',
-    link: null,
-    codeLink: 'https://github.com/tomasesquivelgc/My-Things-Catalog',
-  },
 ];
 
 export default moreProjects;

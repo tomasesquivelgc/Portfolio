@@ -16,8 +16,6 @@ const featured = [
     technologies: ['Ruby', 'Rails', 'PostgreSQL', 'React', 'Redux'],
     image: 'projects/bookcar.webp',
     description: 'Full-stack app built with Ruby on Rails and React/Redux. The user can book a car for a specific date and time, as well as see the available cars and their details. The user can also see the available cities to rent. Admins can add new cars as well as delete them.',
-    link: 'https://fmanimashaun.github.io/book-car/',
-    codeLink: 'https://github.com/tomasesquivelgc/book-car',
   },
 ];
 
