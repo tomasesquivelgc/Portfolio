@@ -3,10 +3,10 @@ import moreProjects from '../data/others';
 import FeaturedProject from '../components/Projects/FeaturedProject';
 import OtherProject from '../components/Projects/OtherProject';
 
-function ProjectsSection() {
+function ExperienceSection() {
   return (
-    <section id="projects" className="min-h-screen px-10 py-20 md:px-16 lg:px-32 bg-richBlack">
-      <h2 className="font-medium text-3xl md:text-5xl py-1">My projects</h2>
+    <section id="experience" className="min-h-screen px-10 py-20 md:px-16 lg:px-32 bg-richBlack">
+      <h2 className="font-medium text-3xl md:text-5xl py-1">Experience</h2>
       <div className="py-3 mb-10">
         <h3 className="font-chivo text-2xl md:text-xl py-1">Featured projects</h3>
         <div className="flex flex-col justify-center py-3 gap-4 md:gap-10">
@@ -34,4 +34,4 @@ function ProjectsSection() {
   );
 }
 
-export default ProjectsSection;
+export default ExperienceSection;
