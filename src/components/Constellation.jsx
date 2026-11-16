@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import propTypes from 'prop-types';
 
 const constellationOptions = (variant) => {
@@ -80,7 +80,10 @@ function loadEngine() {
 const activeRequests = new Map();
 
 function Constellation({ id, variant }) {
+  const [visible, setVisible] = useState(false);
+
   useEffect(() => {
+    setVisible(false);
     const request = {};
     activeRequests.set(id, request);
     let container;
@@ -102,6 +105,7 @@ function Constellation({ id, variant }) {
           return;
         }
         container = loaded;
+        setVisible(true);
       })
       .catch(() => undefined);
 
@@ -117,7 +121,9 @@ function Constellation({ id, variant }) {
     <div
       id={id}
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0"
+      className={`pointer-events-none absolute inset-0 transition-opacity duration-1000 ease-out motion-reduce:transition-none ${
+        visible ? 'opacity-100' : 'opacity-0'
+      }`}
     />
   );
 }
