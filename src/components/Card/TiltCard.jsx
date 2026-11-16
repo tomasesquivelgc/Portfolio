@@ -1,64 +1,67 @@
 import propTypes from 'prop-types';
 import {
-  motion, useMotionValue, useTransform, useSpring,
+  motion, useSpring, useTransform,
 } from 'framer-motion';
+
+const MAX_TILT = 9;
+const spring = { stiffness: 280, damping: 28, mass: 0.45 };
 
 const Card = ({
   technologies, isInView, fromRight = false,
 }) => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
+  const pointerX = useSpring(0, spring);
+  const pointerY = useSpring(0, spring);
 
-  const slidePosition = fromRight ? 200 : -200;
+  const rotateX = useTransform(pointerY, [-0.5, 0.5], [-MAX_TILT, MAX_TILT]);
+  const rotateY = useTransform(pointerX, [-0.5, 0.5], [MAX_TILT, -MAX_TILT]);
+  const glare = useTransform([pointerX, pointerY], ([px, py]) => {
+    const x = (px + 0.5) * 100;
+    const y = (py + 0.5) * 100;
+    return `radial-gradient(420px circle at ${x}% ${y}%, rgba(255,255,255,0.16), transparent 46%)`;
+  });
 
-  const rotateX = useTransform(y, [-300, 300], [15, -15]);
-  const rotateY = useTransform(x, [-300, 300], [-15, 15]);
-
-  // Add spring physics for smoother animation
-  const springConfig = { damping: 15, stiffness: 150 };
-  const springRotateX = useSpring(rotateX, springConfig);
-  const springRotateY = useSpring(rotateY, springConfig);
-
-  function handleMouseMove(event) {
+  function handlePointerMove(event) {
+    if (event.pointerType === 'touch') return;
     const rect = event.currentTarget.getBoundingClientRect();
-    const centerX = rect.x + rect.width / 2;
-    const centerY = rect.y + rect.height / 2;
-
-    x.set(event.clientX - centerX);
-    y.set(event.clientY - centerY);
+    pointerX.set((event.clientX - rect.left) / rect.width - 0.5);
+    pointerY.set((event.clientY - rect.top) / rect.height - 0.5);
   }
 
-  function handleMouseLeave() {
-    x.set(0);
-    y.set(0);
+  function handlePointerLeave() {
+    pointerX.set(0);
+    pointerY.set(0);
   }
+
+  const slide = fromRight ? 72 : -72;
 
   return (
     <motion.div
-      style={{
-        opacity: isInView ? 1 : 0,
-        rotateX: springRotateX,
-        rotateY: springRotateY,
-        perspective: 1000,
-      }}
-      initial={{ x: slidePosition, opacity: 0 }}
+      className="w-full md:w-3/4 [perspective:1200px]"
+      initial={{ opacity: 0, x: slide }}
       animate={{
-        x: isInView ? 0 : slidePosition,
         opacity: isInView ? 1 : 0,
+        x: isInView ? 0 : slide,
       }}
-      transition={{
-        duration: 0.9,
-        ease: [0.17, 0.55, 0.55, 1],
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className="w-full md:w-3/4 p-4 rounded-2xl bg-gradient-to-r from-prussiaBlue via-argBlue to-prussiaBlue transform-gpu shadow-inner-custom"
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="ring ring-night rounded-2xl p-4 shadow-inner-custom">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-fit mx-auto">
+      <motion.div
+        onPointerMove={handlePointerMove}
+        onPointerLeave={handlePointerLeave}
+        style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
+        className="relative rounded-2xl border border-white/10 bg-[#16304a] p-5 shadow-[0_20px_40px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.08)]"
+      >
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 rounded-2xl"
+          style={{ background: glare }}
+        />
+        <div
+          className="relative grid grid-cols-2 md:grid-cols-4 gap-8 w-fit mx-auto"
+          style={{ transform: 'translateZ(28px)' }}
+        >
           {technologies.map((tech) => (
             <div key={tech.title} className="flex flex-col items-center">
-              <div className="w-12 h-12 md:w-24 md:h-24 rounded-lg flex items-center justify-center p-2 bg-richBlack/70">
+              <div className="w-12 h-12 md:w-24 md:h-24 rounded-xl flex items-center justify-center p-2 bg-richBlack/80 border border-white/5">
                 <img
                   className="w-full h-full object-contain"
                   src={tech.icon}
@@ -72,7 +75,7 @@ const Card = ({
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
