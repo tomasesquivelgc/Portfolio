@@ -1,36 +1,26 @@
-import { useState } from "react";
-
 function Recommendation({ name, title, description }) {
-  const [expanded, setExpanded] = useState(false);
-
   return (
-    <div
-      className={`border border-night p-4 bg-prussiaBlue hover:border-argBlue hover:cursor-pointer transition-all duration-300 ease-in-out w-[600px] min-h-[260px] flex flex-col justify-between rounded-xl`}
-      style={{ height: expanded ? "auto" : undefined }}
-    >
-      <div>
-        <h4 className="text-2xl text-argBlue mb-2 hover:text-magnolia">
-          {name}
-        </h4>
-        <h5 className="text-xl italic text-magnolia mb-4">{title}</h5>
+    <div className="border border-white/10 bg-prussiaBlue hover:border-argBlue p-6 w-[600px] self-start flex flex-col rounded-2xl shadow-[0_12px_32px_rgba(0,0,0,0.45)] hover:shadow-[0_18px_40px_rgba(76,168,234,0.22)] transition-all duration-300 ease-in-out">
+      <h4 className="text-2xl text-argBlue mb-2">
+        {name}
+      </h4>
+      <h5 className="text-xl italic text-magnolia/80 mb-4">{title}</h5>
 
-        <p
-          className={`text-magnolia text-sm ${
-            expanded ? "" : "line-clamp-4"
-          } transition-all duration-300`}
-        >
-          {description}
-        </p>
-      </div>
-
-      {description.length > 150 && (
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="text-argBlue mt-2 text-sm hover:text-magnolia self-start"
-        >
-          {expanded ? "Show less" : "Show more"}
-        </button>
-      )}
+      <p className="text-magnolia text-base">
+        {description.reduce((nodes, part) => {
+          const word = typeof part === "string" ? part : part.text;
+          const highlighted = typeof part !== "string";
+          nodes.push(
+            <span
+              key={`${word}-${nodes.length}`}
+              className={highlighted ? "font-semibold text-argBlue" : undefined}
+            >
+              {word}
+            </span>,
+          );
+          return nodes;
+        }, [])}
+      </p>
     </div>
   );
 }
