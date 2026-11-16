@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import { FaMedium, FaGithub, FaLinkedin } from 'react-icons/fa6';
+import Constellation from '../components/Constellation';
 
 function HeroSection() {
   return (
-    <section id="home" className="bg-night min-h-screen flex flex-col justify-center text-center px-10 py-20 md:px-16 lg:px-32 items-center">
-      <div>
+    <section id="home" className="relative isolate bg-night min-h-screen flex flex-col justify-center text-center px-10 py-20 md:px-16 lg:px-32 items-center">
+      <Constellation id="hero-stars" variant="field" />
+      <div className="relative z-10">
         <motion.h1
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -30,14 +32,14 @@ function HeroSection() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1 }}
-        className="w-full flex justify-center"
+        className="relative z-10 w-full flex justify-center"
       >
         <p className="py-3 md:text-l opacity-80 w-full md:w-1/2 font-medium">
           With a passion for technology and innovation, my goal is to create amazing
           digital experiences that bring value to people&apos;s lives.
         </p>
       </motion.div>
-      <div className="flex gap-4 justify-center text-2xl py-1">
+      <div className="relative z-10 flex gap-4 justify-center text-2xl py-1">
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}

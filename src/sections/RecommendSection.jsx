@@ -1,6 +1,7 @@
 import { motion, useMotionValue } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Recommendation from "../components/Recommendations/Recommendation";
+import Constellation from "../components/Constellation";
 import recommendations from "../data/recommendations";
 
 const SPEED = 40; // pixels per second
@@ -150,18 +151,19 @@ const Recommend = () => {
   return (
     <section
       id="recommendations"
-      className="bg-night min-h-screen flex flex-col justify-center text-center py-20"
+      className="relative isolate bg-night min-h-screen flex flex-col justify-center text-center py-20"
     >
-      <h2 className="font-medium text-3xl md:text-5xl text-center">
+      <Constellation id="recommendations-stars" variant="field" />
+      <h2 className="relative z-10 font-medium text-3xl md:text-5xl text-center">
         Recommendations
       </h2>
-      <p className="text-lg md:text-xl text-center mt-3 mb-10">
+      <p className="relative z-10 text-lg md:text-xl text-center mt-3 mb-10">
         Here&apos;s what people have to say about me
       </p>
 
       <div
         ref={viewportRef}
-        className={`relative w-full overflow-hidden select-none touch-pan-y ${trackClass}`}
+        className={`relative z-10 w-full overflow-hidden select-none touch-pan-y ${trackClass}`}
       >
         <motion.div
           ref={containerRef}
