@@ -1,21 +1,33 @@
+import { lazy, Suspense } from 'react';
 import HeroSection from './sections/HeroSection';
-import AboutSection from './sections/AboutSection';
-import ExperienceSection from './sections/ExperienceSection';
-import ContactSection from './sections/ContactSection';
-import SkillsSection from './sections/SkillsSection';
 import Navbar from './components/Navigation/Navbar';
-import Recommend from './sections/RecommendSection';
+
+const ExperienceSection = lazy(() => import('./sections/ExperienceSection'));
+const SkillsSection = lazy(() => import('./sections/SkillsSection'));
+const AboutSection = lazy(() => import('./sections/AboutSection'));
+const Recommend = lazy(() => import('./sections/RecommendSection'));
+const ContactSection = lazy(() => import('./sections/ContactSection'));
 
 function App() {
   return (
     <>
       <Navbar />
       <HeroSection />
-      <ExperienceSection />
-      <SkillsSection />
-      <AboutSection />
-      <Recommend />
-      <ContactSection />
+      <Suspense fallback={null}>
+        <ExperienceSection />
+      </Suspense>
+      <Suspense fallback={null}>
+        <SkillsSection />
+      </Suspense>
+      <Suspense fallback={null}>
+        <AboutSection />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Recommend />
+      </Suspense>
+      <Suspense fallback={null}>
+        <ContactSection />
+      </Suspense>
     </>
   );
 }

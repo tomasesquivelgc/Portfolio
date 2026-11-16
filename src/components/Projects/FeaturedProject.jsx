@@ -50,6 +50,7 @@ const FeaturedProject = ({ project, alignRight }) => {
           src={project.image}
           alt={project.title}
           loading="lazy"
+          decoding="async"
           onLoad={() => setImgHeight(imgRef.current?.offsetHeight || 0)} // 👈 handle async load
         />
       </div>

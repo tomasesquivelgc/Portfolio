@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
 import propTypes from 'prop-types';
-import { tsParticles } from '@tsparticles/engine';
-import { loadSlim } from '@tsparticles/slim';
 
 const constellationOptions = (variant) => {
   const field = variant === 'field';
@@ -62,11 +60,23 @@ const constellationOptions = (variant) => {
   };
 };
 
-const slimReady = loadSlim(tsParticles).catch((error) => {
-  const message = error instanceof Error ? error.message : String(error);
-  if (message.includes('Registration APIs')) return undefined;
-  throw error;
-});
+let slimReady;
+
+function loadEngine() {
+  if (!slimReady) {
+    slimReady = import('@tsparticles/engine').then(async ({ tsParticles }) => {
+      const { loadSlim } = await import('@tsparticles/slim');
+      try {
+        await loadSlim(tsParticles);
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        if (!message.includes('Registration APIs')) throw error;
+      }
+      return tsParticles;
+    });
+  }
+  return slimReady;
+}
 const activeRequests = new Map();
 
 function Constellation({ id, variant }) {
@@ -75,8 +85,8 @@ function Constellation({ id, variant }) {
     activeRequests.set(id, request);
     let container;
 
-    slimReady
-      .then(async () => {
+    loadEngine()
+      .then(async (tsParticles) => {
         if (activeRequests.get(id) !== request) return undefined;
         const element = document.getElementById(id);
         if (!element) return undefined;
