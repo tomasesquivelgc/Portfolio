@@ -31,7 +31,7 @@ const FeaturedProject = ({ project, alignRight }) => {
         opacity: isInView ? 1 : 0,
         transition: 'all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s',
       }}
-      className="w-full px-1 md:px-6 lg:px-8 md:my-2 lg:my-10"
+      className="w-full md:my-2 lg:my-10"
     >
     <div
       className="relative flex w-full"
